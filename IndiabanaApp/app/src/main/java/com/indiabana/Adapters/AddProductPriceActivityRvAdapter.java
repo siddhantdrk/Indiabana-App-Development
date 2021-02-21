@@ -35,7 +35,7 @@ public class AddProductPriceActivityRvAdapter extends RecyclerView.Adapter<AddPr
     public void onBindViewHolder(@NonNull AddProductPriceActivityRvAdapter.ViewHolder holder, int position) {
         holder.badge_img.setImageResource(productPricePostTypeRvItemsArrayList.get(position).getBadge_img());
         holder.badge_name.setText(productPricePostTypeRvItemsArrayList.get(position).getBadge_name());
-        holder.badge_name.setTextColor(productPricePostTypeRvItemsArrayList.get(position).getBadge_textcolor());
+        holder.badge_name.setTextColor(context.getResources().getColor(productPricePostTypeRvItemsArrayList.get(position).getBadge_textcolor()));
         if (productPricePostTypeRvItemsArrayList.get(position).getBadge_name().equals(context.getResources().getString(R.string.badge_name4)))
             holder.info_img.setVisibility(View.VISIBLE);
         else
