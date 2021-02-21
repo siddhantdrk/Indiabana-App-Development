@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gray_bg_round_corner"
+    tools:context=".Fragments.HelpFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/roboto_bold"
+            android:text="@string/how_can_we_help_you"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/buying_txt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:fontFamily="@font/roboto_regular"
+            android:background="@drawable/my_account_rel_layout_stroke_bg"
+            android:padding="16dp"
+            android:text="@string/buying"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            app:drawableEndCompat="@drawable/ic_mdi_keyboard_arrow_right_black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+        <TextView
+            android:id="@+id/selling_txt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/my_account_rel_layout_stroke_bg"
+            android:fontFamily="@font/roboto_regular"
+            android:padding="16dp"
+            android:text="@string/selling"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            app:drawableEndCompat="@drawable/ic_mdi_keyboard_arrow_right_black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/buying_txt" />
+
+        <TextView
+            android:id="@+id/alliances_txt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/my_account_rel_layout_stroke_bg"
+            android:fontFamily="@font/roboto_regular"
+            android:padding="16dp"
+            android:text="@string/alliances"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            app:drawableEndCompat="@drawable/ic_mdi_keyboard_arrow_right_black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/selling_txt" />
+
+        <TextView
+            android:id="@+id/payment_charges_billing_txt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/my_account_rel_layout_stroke_bg"
+            android:fontFamily="@font/roboto_regular"
+            android:padding="16dp"
+            android:text="@string/payments_charges_and_billing"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            app:drawableEndCompat="@drawable/ic_mdi_keyboard_arrow_right_black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/alliances_txt" />
+
+        <TextView
+            android:id="@+id/shipping_txt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/my_account_rel_layout_stroke_bg"
+            android:fontFamily="@font/roboto_regular"
+            android:padding="16dp"
+            android:text="@string/shipping"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            app:drawableEndCompat="@drawable/ic_mdi_keyboard_arrow_right_black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/payment_charges_billing_txt" />
+
+        <TextView
+            android:id="@+id/acc_security_txt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/my_account_rel_layout_stroke_bg"
+            android:fontFamily="@font/roboto_regular"
+            android:padding="16dp"
+            android:text="@string/account_security"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            app:drawableEndCompat="@drawable/ic_mdi_keyboard_arrow_right_black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/shipping_txt" />
+
+
+        <TextView
+            android:id="@+id/settings_txt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/my_account_rel_layout_stroke_bg"
+            android:fontFamily="@font/roboto_regular"
+            android:padding="16dp"
+            android:text="@string/settings"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            app:drawableEndCompat="@drawable/ic_mdi_keyboard_arrow_right_black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/acc_security_txt" />
+
+        <TextView
+            android:id="@+id/support_txt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/my_account_rel_layout_stroke_bg"
+            android:fontFamily="@font/roboto_regular"
+            android:padding="16dp"
+            android:text="@string/support"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            app:drawableEndCompat="@drawable/ic_mdi_keyboard_arrow_right_black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/settings_txt" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</ScrollView>

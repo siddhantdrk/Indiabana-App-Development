@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:elevation="8dp"
+    app:cardCornerRadius="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="16dp"
+            android:fontFamily="@font/roboto_regular"
+            android:text="@string/sort_by"
+            android:textColor="@color/black"
+            android:textSize="24sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#D2D2D2" />
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="24dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="32dp"
+            android:orientation="vertical">
+
+            <RadioButton
+                android:id="@+id/all_states_rd_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="24dp"
+                android:fontFamily="@font/roboto_regular"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:text="@string/all_the_states"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:theme="@style/RadioBtnStyle" />
+
+            <RadioButton
+                android:id="@+id/in_process_rd_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="24dp"
+                android:fontFamily="@font/roboto_regular"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:text="@string/in_process"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:theme="@style/RadioBtnStyle" />
+
+            <RadioButton
+                android:id="@+id/sent_rd_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="24dp"
+                android:fontFamily="@font/roboto_regular"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:text="@string/sent"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:theme="@style/RadioBtnStyle" />
+
+            <RadioButton
+                android:id="@+id/in_mediation_rd_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto_regular"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:text="@string/in_mediation"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:theme="@style/RadioBtnStyle" />
+
+
+        </RadioGroup>
+
+    </LinearLayout>
+
+</com.google.android.material.card.MaterialCardView>

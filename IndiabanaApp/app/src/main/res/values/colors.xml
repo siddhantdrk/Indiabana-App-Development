@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="indiabana_orange">#F7931E</color>
+    <color name="dark_azyl">#13162D</color>
+    <color name="activity_bg_color">#E5E5E5</color>
+    <color name="faint_gray_txt_color">#BDBDBD</color>
+    <!--    bills_rv_item-->
+    <color name="bill_rv_item_status_green">#219653</color>
+    <color name="bill_rv_item_status_red">#EB5757</color>
+    <color name="bill_rv_item_status_blue">#2F80ED</color>
+    <color name="bill_rv_item_status_yellow">#F2C94C</color>
+    <!--    bills_rv_item-->
+
+    <color name="colorRed">#FFCD1C1C</color>
+    <!--    cart_rv_item-->
+    <color name="cart_rv_transparent">#80000000</color>
+    <!--    cart_rv_item-->
+
+    <!--    readAnswerBuyerFragment  readQuestionSellerFragment-->
+    <color name="GrayBorderStroke">#BDBDBD</color>
+    <color name="dateColor">#828282</color>
+    <!--    readAnswerBuyerFragment  readQuestionSellerFragment-->
+
+    <color name="text1">#828282</color>
+    <color name="text2">#333333</color>
+    <color name="gray">#BDBDBD</color>
+
+    <!--AddProductPriceActivityRvAdapter-->
+    <color name="free_badge">#828282</color>
+    <color name="standard_badge">#CD7F32</color>
+    <color name="outstanding_badge">#ADADAD</color>
+    <color name="gold_badge">#FFE07D</color>
+    <color name="azul_oscuro">#13162D</color>
+    <!--AddProductPriceActivityRvAdapter-->
+</resources>

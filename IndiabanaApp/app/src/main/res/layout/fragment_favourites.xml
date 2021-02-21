@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:background="#E5E5E5"
+    tools:context=".Fragments.FavouritesFragment">
+
+    <View
+        android:id="@+id/textView_holder"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@color/dark_azyl"
+        app:layout_constraintDimensionRatio="375:40"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/location_img"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_margin="16dp"
+        android:background="@drawable/ic_mdi_place"
+        app:layout_constraintBottom_toBottomOf="@+id/textView_holder"
+        app:layout_constraintEnd_toStartOf="@+id/location_txt"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textView_holder" />
+
+    <TextView
+        android:id="@+id/location_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:background="#161D53"
+        android:fontFamily="@font/roboto_regular"
+        android:text="San Telmo"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        app:drawableEndCompat="@drawable/ic_mdi_keyboard_arrow_right_orange"
+        app:layout_constraintBottom_toBottomOf="@+id/textView_holder"
+        app:layout_constraintStart_toEndOf="@+id/location_img"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/item_rv"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginHorizontal="8dp"
+        android:layout_marginTop="8dp"
+        android:visibility="visible"
+        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView_holder"
+        app:spanCount="2"
+        tools:listitem="@layout/favourite_rv_item" />
+</androidx.constraintlayout.widget.ConstraintLayout>

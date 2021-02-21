@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".Fragments.CustomerAddressSeller.iCarryFragment">
+
+    <TextView
+        android:id="@+id/icarry_textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:fontFamily="@font/roboto_regular"
+        android:text="@string/an_icarrer_will_approach_your_store_to_pick_up_the_package_you_must_print_an_identifier_and_paste_it_on_the_package_so_that_it_can_be_identified"
+        android:textColor="@color/black"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/icarry_imageView"
+        android:layout_width="135dp"
+        android:layout_height="135dp"
+        android:layout_marginTop="24dp"
+        android:src="@drawable/i_carry_cube"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/icarry_textView" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:translationX="40dp"
+        android:translationY="-16dp"
+        app:cardCornerRadius="4dp"
+        app:layout_constraintEnd_toEndOf="@+id/icarry_imageView"
+        app:layout_constraintTop_toTopOf="@+id/icarry_imageView"
+        app:strokeColor="#E0E0E0"
+        app:strokeWidth="1dp">
+
+        <ImageView
+            android:id="@+id/scan_image"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_margin="8dp"
+            android:src="@drawable/barcode_1" />
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/icarry_printIdentifier"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:backgroundTint="@color/indiabana_orange"
+        android:fontFamily="@font/roboto_regular"
+        android:text="@string/print_identifier"
+        android:textAllCaps="false"
+        app:cornerRadius="3dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/icarry_imageView" />
+
+    <View
+        android:id="@+id/view2"
+        android:layout_width="match_parent"
+        android:layout_height="12dp"
+        android:layout_marginTop="16dp"
+        android:background="@color/activity_bg_color"
+        app:layout_constraintTop_toBottomOf="@+id/icarry_printIdentifier" />
+
+    <TextView
+        android:id="@+id/order_detail_shipping_detail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#BDBDBD"
+        android:fontFamily="@font/roboto_medium"
+        android:gravity="center"
+        android:paddingStart="16dp"
+        android:paddingTop="14dp"
+        android:paddingEnd="24dp"
+        android:paddingBottom="14dp"
+        android:text="@string/request_collection"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        app:drawableEndCompat="@drawable/ic_mdi_keyboard_arrow_right_black"
+        app:drawableStartCompat="@drawable/ic_truck_black"
+        app:layout_constraintTop_toBottomOf="@+id/view2" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,444 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!--    LoginActivity-->
+    <string name="app_name">Indiabana</string>
+    <string name="log_in">Inicia sesión</string>
+    <string name="log_in_short">Ingresar</string>
+    <string name="you_are_maria">¿Eres Maria Benedetti?</string>
+    <string name="enter_your_details">Ingrese sus datos</string>
+    <string name="email">Correo electrónico</string>
+    <string name="password">Contraseña</string>
+    <string name="i_forgot_my_password">Olvidé contraseña</string>
+    <string name="you_do_not_have_an_account">¿No tienes cuenta? </string>
+    <string name="sign_up">Regístrese</string>
+    <!--    LoginActivity-->
+
+    <!--    sideNavigation-->
+    <string name="hello_maria">Hola, Maria Benedetti</string>
+    <string name="my_account">Mi cuenta</string>
+    <string name="home">Inicio</string>
+    <string name="questions">Preguntas</string>
+    <string name="my_shopping">Mis compras</string>
+    <string name="my_sales">Mis ventas</string>
+    <string name="alliances">Alianzas</string>
+    <string name="to_post">Publicar</string>
+    <string name="billing">Facturación</string>
+    <string name="setting">Configuración</string>
+    <string name="account">Cuenta</string>
+    <string name="help">Ayuda</string>
+    <string name="links_of_interest">Enlaces de interés</string>
+    <string name="advertise_in_indiabana">Anunciar en Indiabana</string>
+    <string name="how_does_indiabana_work">¿Como funciona Indiabana?</string>
+    <string name="about_indiabana">Acerca de Indiabana </string>
+    <string name="rate_app">Calificar aplicación</string>
+    <string name="indiabana_v1_0_0">Indiabana V1.0.0</string>
+    <string name="o">O</string>
+
+    <!--    sideNavigation-->
+
+    <!--    MyShoppingFragment-->
+    <string name="see_all">Ver todas</string>
+    <!--    MyShoppingFragment-->
+
+    <!--    MySalesFragment-->
+    <string-array name="month">
+        <item>January</item>
+        <item>February</item>
+        <item>March</item>
+        <item>April</item>
+        <item>May</item>
+        <item>June</item>
+        <item>July</item>
+        <item>August</item>
+        <item>September</item>
+        <item>October</item>
+        <item>November</item>
+        <item>December</item>
+    </string-array>
+
+    <string-array name="sort_by">
+        <item>Ordenar por</item>
+        <item>Más reciente</item>
+        <item>Alfabéticamente</item>
+        <item>Monto</item>
+    </string-array>
+
+    <string-array name="status">
+        <item>Ver todo</item>
+        <item>Todos</item>
+        <item>En Proceso</item>
+        <item>Recibido</item>
+        <item>Mediación</item>
+    </string-array>
+
+    <string name="sort_by">Ordenar por</string>
+    <string name="all_the_states">Todos los estatus</string>
+
+    <string name="higher_amount_first">Mayor monto primero</string>
+    <string name="lower_amount_first">Menor monto primero</string>
+    <string name="most_recent">Más reciente</string>
+    <string name="in_process">En proceso</string>
+    <string name="sent">Enviados</string>
+    <string name="in_mediation">En mediación</string>
+
+    <!--    MySalesFragment-->
+
+    <!--    my_shopping_rv_item my_sales_rv_item-->
+    <string name="price">Precio:</string>
+    <string name="amount">Cantidad:</string>
+    <string name="status">Estatus:</string>
+    <string name="amt">Cant.:</string>
+    <string name="client">Cliente:</string>
+    <!--    my_shopping_rv_item my_sales_rv_item-->
+
+    <!--    rate_delivery_buyer-->
+    <string name="rate">Calificar</string>
+    <string name="comment">Deja tus comentarios sobre el iCarrer</string>
+    <string name="rate_activity_heading">Calificar a tu iCarrer</string>
+    <string name="package_delivered">Paquete entregado :</string>
+    <!--    rate_delivery_buyer-->
+
+    <!--    ToPostActivty-->
+    <string name="what_are_you_selling">¿Qué estás vendiendo?</string>
+    <string name="ej_smarttv_lg_42_wifi">Ej. SmartTV LG 42” WiFi</string>
+    <string name="discard">Descatar</string>
+    <string name="continue_post">Continuar</string>
+    <string name="add_product">Añadir producto</string>
+    <string name="discover_a_new_nway_to_sell">Descubre una nueva\nforma de vender</string>
+    <string name="i_need_help">Necesito ayuda</string>
+    <!--    AddProductActivity-->
+    <!--   main_activity_content-->
+    <string name="what_are_you_looking_for">¿Qué estás buscando?</string>
+    <string name="recommended_for_you">Recomendado para ti</string>
+    <string name="home_appliance">Electrodomésticos</string>
+    <string name="explora_por_categor_a">Explora por categoría</string>
+    <string name="consolas_y_videojuegos">Consolas y videojuegos</string>
+    <string name="featured_selleres">Vendedores descatacados</string>
+    <!--   main_activity_content-->
+    <!--    RegisterActivity-->
+    <string name="register_userName">Nombre</string>
+    <string name="register_sign_up">Registrarme</string>
+    <string name="register_privacy_policy">Al registrarme acepto la política de privacidad y los términos y condiciones de Indiabana</string>
+    <string name="register">Registrarme</string>
+    <string name="already_have_an_account">¿Ya tienes cuenta?</string>
+    <string name="log_in_register">Iniciar sesión</string>
+
+    <!--    RegisterActivity-->
+
+    <!--    PasswordRecoveryActivity-->
+    <string name="new_password">Nueva contraseña </string>
+    <string name="password_update">Actualización de contraseña</string>
+    <string name="confirm_your_new_password">Confirme su nueva contraseña</string>
+    <string name="update_button">Actualizar</string>
+    <!--    PasswordRecoveryActivity-->
+
+    <!--    BillingFragment-->
+    <string name="available_for_withdrawal">Disponible para retirar</string>
+    <string name="withdraw">Retirar</string>
+    <string name="total">Total:</string>
+    <string name="available">Disponible::</string>
+    <string name="pending">Pendiente:</string>
+    <string name="mediation">Mediación:</string>
+    <!--    BillingFragment-->
+
+    <!--    SettingsFragment-->
+    <string name="account_setting_buyer_seller_name">Nombres</string>
+    <string name="account_setting_buyer_seller_Maria_Alegendra">Maria Alegendra</string>
+    <string name="account_setting_buyer_seller_last_name">Apellidos</string>
+    <string name="account_setting_buyer_seller_Benedetti_Salvatore">Benedetti Salvatore</string>
+    <string name="account_setting_buyer_seller_DNI">DNI</string>
+    <string name="account_setting_buyer_seller_number">123456789</string>
+    <string name="account_setting_buyer_seller_check">Verificar</string>
+    <string name="account_setting_buyer_seller_cuit">Cuit</string>
+    <string name="account_setting_buyer_seller_no_information">Sin información</string>
+    <string name="account_setting_buyer_seller_contact_info">Datos de contacto </string>
+    <string name="account_setting_buyer_seller_email_txt">Correo electrónico </string>
+    <string name="account_setting_buyer_seller_emailId">mariabennedetti123@gmail.com</string>
+    <string name="account_setting_buyer_seller_telephone_txt">Teléfono</string>
+    <string name="account_setting_buyer_seller_telephone_value">549 3201 023 013</string>
+    <string name="account_setting_buyer_seller_password">Contraseña</string>
+    <string name="account_setting_buyer_seller_last_updated">Ultima actualización hace 6 meses aprox </string>
+    <string name="account_setting_buyer_seller_payment_method">Métodos de pago / cobro </string>
+    <string name="account_setting_buyer_seller_card">Tarjeta </string>
+    <string name="account_setting_buyer_seller_Visa_card">Visa terminada 5400</string>
+    <string name="account_setting_buyer_seller_bank">Banco</string>
+    <string name="account_setting_buyer_seller_bank_name">BBVA C. Cheques terminada en 1234</string>
+    <string name="account_setting_buyer_seller_Anadir_metodo">Anadir metodo</string>
+    <string name="account_setting_buyer_seller_new_payment_method">Affiliate a new payment method / Charge</string>
+    <string name="account_setting_buyer_seller_addresses">Direcciones</string>
+    <string name="account_setting_buyer_seller_purchase">Compras </string>
+    <string name="account_setting_buyer_seller_delivery_address">Av. 12 con calle 5 y 3, San Telmo. CABA, Buenos Aires</string>
+    <string name="account_setting_buyer_seller_sales_alliance">Ventas / alianzas </string>
+    <string name="account_setting_buyer_seller_add_address">Añadir direccion</string>
+    <string name="account_setting_buyer_seller_add_new_address">Añada una nueva direccion para comprar o ventas</string>
+    <string name="personal_information">Datos personales</string>
+    <!--    SettingsFragment-->
+
+
+    <!--    Cart Fragment-->
+    <string name="shipping_address">Dirección de envío:</string>
+    <string name="payment_methods">Métodos de pago</string>
+    <string name="select_the_payment_method_to_use">Selecciona el método de pago a usar.</string>
+    <string name="visa_terminated_in">Visa terminada en 5400</string>
+    <string name="maria_benedetti">Maria Benedetti</string>
+    <string name="add_new_card">Añadir nueva tarjeta</string>
+    <string name="qty">Cant:</string>
+    <string name="color_cart_rv">Color</string>
+    <string name="capacity_cart_rv">Capacidad:</string>
+    <string name="total_cart" tools:ignore="DuplicateDefinition">Total:</string>
+    <string name="shopping_cart">Carrito</string>
+    <string name="shipping_heading">Envío</string>
+    <string name="select_the_shipping_method_of_your_preference">Seleccione el método de envío de su preferencia.</string>
+    <string name="standard_icarry">iCarry Estándar</string>
+    <string name="receive_your_package_in_15_hours_approx">Recibe su paquete en 15hrs aprox.</string>
+    <string name="receive_in_3_hours_approx_shipping_insurance">Recibe en 3hrs aprox. + seguro de envíos.</string>
+    <string name="premium_icarry">iCarry Premium</string>
+    <string name="consult_the_seller_to_know_more">Consulta al vendedor para saber más.</string>
+    <string name="dhl">DHL</string>
+    <string name="amount_details">Detalles del monto</string>
+    <string name="commodity_cart">Mercancía:</string>
+    <string name="discount">Descuento:</string>
+    <string name="partner_program">Programa de aliados:</string>
+    <!--    Cart Fragment-->
+
+    <!--    Shopping Address Fragment-->
+    <string name="my_addresses">Mis direcciones</string>
+    <string name="select_the_address_you_want_or_add_a_new_one_keep_in_mind_this_can_modify_the_price_and_delivery_time">Seleccione la dirección que desea o añada una nueva. Tenga en cuenta esto puede modificar el precio y tiempo de entrega.</string>
+    <string name="add_new_address">Añadir nueva dirección</string>
+    <string name="find_my_location">Localizar mi ubicación</string>
+    <!--    Shopping Address Fragment-->
+
+    <!--    MyAccountFragment-->
+    <string name="store_management">Gestión de tienda</string>
+    <string name="inventory">Inventario</string>
+    <string name="manage_all_posts">Gestione todas las publicaciones</string>
+    <string name="promote_product">Promocionar producto</string>
+    <string name="get_more_reach_and_sell_more">Obtenga un mayor alcance y venda más</string>
+    <string name="reputation">Reputación</string>
+    <string name="check_your_reputation">Consulte su reputación</string>
+    <string name="notifications_preferences">Preferencias de notificaciones</string>
+    <string name="configure_when_you_want_to_receive_notifications">Configure cuando desea recibir notificaciones</string>
+    <string name="log_out">Cerrar sesión</string>
+
+    <!--    MyAccountFragment-->
+    <!--    HelpFragment-->
+    <string name="how_can_we_help_you">¿Como podemos ayudarte?</string>
+    <string name="buying">Comprando</string>
+    <string name="selling">Vendiendo</string>
+    <string name="alliances_help_fragment">Alianzas</string>
+    <string name="payments_charges_and_billing">Pagos, cobros y facturacion</string>
+    <string name="shipping">Envíos </string>
+    <string name="account_security">Seguridad de la cuenta</string>
+    <string name="settings">Configuración</string>
+    <string name="support">Soporte</string>
+    <!--    HelpFragment-->
+
+
+    <!--    Home Fragment Tab Content-->
+    <string name="food">Comida</string>
+    <string name="Clothing">Ropa</string>
+    <string name="accessories">Accesorios</string>
+    <string name="technology">Tecnología</string>
+    <string name="babies">Bebés</string>
+    <string name="home_acc">Hogar</string>
+
+    <!--    Home Fragment Tab Content-->
+    <!--    Alliance Fragment-->
+    <string name="commitments">Compromisos</string>
+    <string name="my_alliances">Mis alianzas</string>
+    <string name="requests">Solicitudes</string>
+    <string name="potential_alliances">Alianzas potenciales</string>
+    <string name="type_of_commitment">Tipo de compromiso</string>
+    <string name="ally">Aliado</string>
+    <!--    Alliance Fragment-->
+
+    <!--PromoteFragment-->
+    <string name="promote">"Promocionar"</string>
+    <string name="increase_your_sales">Aumenta tus ventas</string>
+    <string name="select_the_publication_to_promote">Selecciona la publicación a promocionar</string>
+    <string name="search_publication">Buscar publicación</string>
+    <!--PromoteFragment-->
+
+    <!-- Alliances -->
+    <string name="av_12_con_calle_3_y_6_esquina_el_marquez_caballito_caba_argentina">Av 12 con calle 3 y 6 esquina el Marquez Caballito, CABA, Argentina</string>
+    <string name="common_products_18">Productos en común:</string>
+    <string name="zapateria_don_calos">Zapateria Don Calos</string>
+
+    <string name="zapateria_sneaker">Zapateria Sneaker</string>
+    <string name="adidas_latam">Adidas Latam</string>
+    <!-- Alliances -->
+
+    <!--    readAnswerBuyerFragment  readQuestionSellerFragment-->
+    <string name="duis_aute_irure_dolor_in_reprehenderit_in_volupate_velit_esse_cillum_dolore_eu_fugiat_nulla_pariatur_duis_aute_irure_dolor_in_reprehenderit_in_voluptate_velit_esse_cillum_dolore_eu_fugiat_nulla_pariatur_duis_aute_irure_dolor_in_reprehendrit_in_volpurate_velit_esse_cillum_dolore_eu_fugiat_nulla_pariatur">Duis aute irure dolor in reprehenderit in volupate velit esse cillum dolore eu fugiat nulla pariatur. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.Duis aute irure dolor in reprehendrit in volpurate velit esse cillum dolore eu fugiat nulla pariatur.</string>
+    <string name="do_you_have_any_other_questions">¿Tienes alguna otra pregunta?</string>
+    <string name="send_question">Enviar pregunta</string>
+    <string name="buy_now">Comprar ahora</string>
+    <string name="report">Reportar</string>
+    <string name="_or">O</string>
+    <string name="answer">Responder</string>
+    <string name="answer_here">Responda aquí</string>
+    <!--    readAnswerBuyerFragment  readQuestionSellerFragment-->
+
+    <!--orderDetailsProductSentFragment-->
+
+    <string name="order_details">Detalles de orden</string>
+    <string name="order_number">Orden número</string>
+    <string name="date_of_purchase">Fecha de compra</string>
+    <string name="sales_channel">Canal de venta</string>
+    <string name="you_qualify_to_make_this_delivery">Calificas para hacer esta entrega</string>
+    <string name="products">Productos</string>
+    <string name="price_txt">Precio:</string>
+    <string name="features">Características</string>
+    <string name="color">Color:</string>
+    <string name="capacity">Capacidad:</string>
+    <string name="commodity">Mercancía</string>
+    <string name="indiabana_commission_10">Comisión Indiabana(10%)</string>
+    <string name="you_will_receive">Recibirás</string>
+    <string name="last_update">Última actualización</string>
+    <string name="details">Detalles</string>
+    <string name="paid_by_buyer">Pagado por el comprador</string>
+    <string name="shipment_details">Detalles del envío</string>
+    <string name="buyer">Comprador</string>
+    <string name="send_message">Enviar mensaje</string>
+    <string name="i_have_sent_the_package">He enviado el paquete</string>
+
+    <!--orderDetailsProductSentFragment-->
+
+
+    <!--NotificationFragment-->
+    <string name="notification">"Notificaciones"</string>
+
+    <!--    customerAddressSellerFragment-->
+
+    <string name="you_must_send_the_package_to">Debes enviar el paquete a</string>
+    <string name="address">Dirección</string>
+    <string name="address_2_optional">Dirección 2 (opcional) </string>
+    <string name="postal_code">Código postal</string>
+    <string name="city">Ciudad</string>
+    <string name="province">Provincia</string>
+    <string name="how_will_you_send_the_package">¿Como enviaras el paquete?</string>
+    <string name="icarry">iCarry</string>
+    <string name="other">Otro</string>
+    <string name="request_collection">Solicitar recolección</string>
+    <string name="tracking_code">Código de seguimiento</string>
+    <string name="enter_the_tracking_code">Indica el Código de seguimiento</string>
+    <string name="indicate_the_name_of_the_shipping_company">Indica el Nombre de la empresa de envío </string>
+    <string name="shipping_company_name">Nombre de la empresa de envío</string>
+    <string name="an_icarrer_will_approach_your_store_to_pick_up_the_package_you_must_print_an_identifier_and_paste_it_on_the_package_so_that_it_can_be_identified">
+            Un iCarrer se acercará a tu tienda para
+recoger el paquete, deberás imprimir un
+identificador y pegarla sobre el paquete para
+que pueda ser identificada</string>
+    <string name="print_identifier">Imprimir identificador</string>
+    <!--    customerAddressSellerFragment-->
+    <!--    favourite_rv_item.xml-->
+    <string name="buy">Comprar</string>
+    <string name="DeliveryIn">Entrega en:</string>
+    <!--    favourite_rv_item.xml-->
+
+    <!--    Payment Method Fragment-->
+    <string name="payment_method">Método de pago:</string>
+    <string name="date_of_payment">Fecha del pago:</string>
+    <string name="payment_status">Estatus del pago:</string>
+    <string name="discount_payment">Descuento:</string>
+    <string name="shipping_payment">Envío:</string>
+    <string name="order_partner_program">Programa de aliados:</string>
+    <string name="total_payment">Total:</string>
+    <string name="track_my_package">Rastrear mi paquete</string>
+    <string name="seller">Vendedor</string>
+    <string name="in_process_purchase">En proceso</string>
+    <string name="see_original_sale">Ver venta original</string>
+    <string name="products_to_be_replaced">Productos a reponer</string>
+    <string name="ally_alliance">Aliado</string>
+    <string name="pending_to_be_sent">Pendiente por enviar</string>
+    <!--    Payment Method Fragment-->
+
+    <!--    Add product Fragment-->
+    <string name="create_a_new_product_or_edit_a_preloaded_publication">Crea un nuevo producto, o editar una publicación precargada.</string>
+    <string name="brand">Marca:</string>
+    <string name="code">Código:</string>
+    <string name="model">Modelo:</string>
+    <string name="see_more">Ver más.</string>
+    <string name="create_new_product_from_zero">Crear nuevo producto desde cero</string>
+    <string name="is_it_any_of_these">¿Es alguno de estos?</string>
+    <string name="sports_shoes">Zapatos deportivos</string>
+    <string name="ally_profile">Perfil de aliado</string>
+    <string name="sale_details">Detalles de venta</string>
+    <string name="replacement_order">Orden de reposición</string>
+    <string name="purchase_details">Detalles de compra</string>
+    <string name="shipping_details">Envíos</string>
+    <string name="brand_details">Marca</string>
+    <!--    Add product Fragment-->
+
+    <!--    Alley Fragment-->
+    <string name="details_fragment">Detalles</string>
+    <string name="aliance_for_8_moths">Alianza desde hace 8 meses.</string>
+    <string name="common_products">Productos en común: 18</string>
+    <string name="products_item">Productos</string>
+    <string name="Comments">Comentarios</string>
+    <string name="operations">Operaciones</string>
+    <string name="include_in_the_alliance">Incluído en la alianza:</string>
+    <!--    Alley Fragment-->
+
+    <!--    Alliance Request Activity-->
+    <string name="to_accept">Aceptar</string>
+    <string name="alliance_request">Solicitud de alianza</string>
+    <string name="alliance_to_refuse">Rechazar</string>
+    <string name="send_request">Enviar solicitud</string>
+    <string name="rule_out">Descartar</string>
+    <!--    Alliance Request Activity-->
+
+    <!--  My Account  -->
+    <string name="active_post">Publicaciones activas</string>
+    <string name="publication">Publicación</string>
+    <string name="description">SmartTV Samsung WiFi con puerto USB C, 3D y sonido envolvente.</string>
+    <string name="publication_name">Nombre</string>
+    <string name="publication_price">Precio</string>
+    <string name="publication_amount">Cantidad</string>
+    <string name="publication_product_condition">Condición del producto</string>
+    <string name="publication_new">Nuevo</string>
+    <string name="publication_increase_chance">Aumenta las probabilidades de venta</string>
+    <string name="publication_upgrade"><u>Actualizar a destacado</u></string>
+    <string name="publication_category">categoría</string>
+    <string name="publication_description">Descripción</string>
+    <string name="publication_data_sheet">Ficha técnica</string>
+    <string name="publication_warranty">Garantía</string>
+    <string name="publication_post_type">Tipo de publicación</string>
+    <string name="publication_promote">Promocionar publicación</string>
+    <string name="publication_see">Ver publicación</string>
+    <string name="publication_pause">Pausar publicación</string>
+    <string name="publication_finish">Finalizar publicación</string>
+    <string name="all_most_finish">Casi terminas !</string>
+    <string name="what_is_price">¿Cuál es el precio de tu producto?</string>
+    <string name="VAT_must">El IVA debe ir incluido en este precio de venta</string>
+    <string name="average_market_price">Precio promedio del mercado</string>
+    <string name="what_is_this"><u>¿Qué es esto?</u></string>
+    <string name="choose_post_type">Elige un tipo de publicación</string>
+    <string name="save_as_draft"><u>Guardar como borrador</u></string>
+    <string name="badge_name1">Gratuita</string>
+    <string name="duration1">Duración: 60 días</string>
+    <string name="exposure1">Baja exposición</string>
+    <string name="accumulate1">No acumula ventas ni visualizaciones</string>
+    <string name="stock1">Stock limitado (1 unidad)</string>
+    <string name="percent1">Sin comisiones por venta</string>
+    <string name="badge_name2">Estándar</string>
+    <string name="duration2">Duración: Ilimitada</string>
+    <string name="exposure2">Exposición media / alta</string>
+    <string name="accumulate2">Acumula ventas y visualizaciones</string>
+    <string name="stock2">Stock ilimitado</string>
+    <string name="percent2">10% sobre el precio de venta</string>
+    <string name="badge_name3">Destacado</string>
+    <string name="duration3">Duración: Ilimitada</string>
+    <string name="exposure3">Exposición alta</string>
+    <string name="accumulate3">Acumula ventas y visualizaciones</string>
+    <string name="stock3">Stock ilimitado</string>
+    <string name="percent3">15% sobre el precio de venta</string>
+    <string name="badge_name4">Gold</string>
+    <string name="duration4">Duración: 30días</string>
+    <string name="exposure4">Exposición: Super alta</string>
+    <string name="accumulate4">No acumula ventas ni visualizaciones</string>
+    <string name="stock4">Stock limitado (1 unidad)</string>
+    <string name="percent4">20% sobre el precio de venta</string>
+    <string name="ready_to_sale">¡Genial! Prepárate para vender.</string>
+    <!--  My Account  -->
+</resources>
