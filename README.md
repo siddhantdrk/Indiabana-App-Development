@@ -1,2 +1,2 @@
 # Indiabana-App-Development
-Indiabana E-commerce Android App 
+Indiabana All in one E-commerce Android App 
