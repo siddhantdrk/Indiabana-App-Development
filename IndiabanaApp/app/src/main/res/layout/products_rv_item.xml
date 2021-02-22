@@ -50,7 +50,7 @@
             android:layout_marginTop="4dp"
             android:layout_toEndOf="@id/order_detail_product_imageView"
             android:fontFamily="@font/roboto_regular"
-            android:text="@string/price_txt"
+            android:text="@string/price_txt_2"
             android:textColor="@color/black"
             android:textSize="14sp" />
 

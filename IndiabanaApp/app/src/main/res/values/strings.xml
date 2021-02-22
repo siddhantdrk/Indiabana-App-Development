@@ -257,6 +257,7 @@
     <string name="you_qualify_to_make_this_delivery">You qualify to make this delivery</string>
     <string name="products">Products</string>
     <string name="price_txt">Price:</string>
+    <string name="price_txt_2">Price:</string>
     <string name="features">Features</string>
     <string name="color">Color:</string>
     <string name="capacity">Capacity:</string>
