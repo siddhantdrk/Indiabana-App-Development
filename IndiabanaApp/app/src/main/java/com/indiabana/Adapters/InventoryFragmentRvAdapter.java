@@ -32,7 +32,7 @@ public class InventoryFragmentRvAdapter extends RecyclerView.Adapter<InventoryFr
     @Override
     public InventoryFragmentRvAdapter.InventoryFragmentRvViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View itemView = LayoutInflater.from(context)
-                .inflate(R.layout.inventory_rv_item, parent, false);
+                .inflate(R.layout.publication_promotes_rv_item, parent, false);
         return new InventoryFragmentRvViewHolder(itemView);
     }
 

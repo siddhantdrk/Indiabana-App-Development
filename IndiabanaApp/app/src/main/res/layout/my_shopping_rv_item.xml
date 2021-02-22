@@ -24,6 +24,8 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:fontFamily="@font/roboto_regular"
+        android:maxLines="2"
+        android:ellipsize="end"
         android:text="Samsung Galaxy 20A, ultra desbloqueado para todas las operadoras."
         android:textColor="@color/black"
         android:textSize="14sp"
