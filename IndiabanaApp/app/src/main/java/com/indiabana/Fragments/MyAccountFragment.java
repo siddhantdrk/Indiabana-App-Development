@@ -1,5 +1,6 @@
 package com.indiabana.Fragments;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -7,7 +8,11 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.RelativeLayout;
 
+import androidx.annotation.NonNull;
+import androidx.fragment.app.Fragment;
+
 import com.indiabana.Activities.InventoryActivity;
+import com.indiabana.Activities.MainActivity;
 import com.indiabana.Adapters.MainFilterRecyclerAdapter;
 import com.indiabana.Data.ListItem;
 import com.indiabana.R;
@@ -15,8 +20,6 @@ import com.reim.android.filterrecyclerview.FilterRecyclerView;
 
 import java.util.ArrayList;
 import java.util.List;
-
-import androidx.fragment.app.Fragment;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -34,6 +37,7 @@ public class MyAccountFragment extends Fragment implements View.OnClickListener 
     private String mParam1;
     private String mParam2;
     FilterRecyclerView filterView;
+    Context mcontext;
 
     public MyAccountFragment() {
         // Required empty public constructor
@@ -77,6 +81,16 @@ public class MyAccountFragment extends Fragment implements View.OnClickListener 
         filterView = getActivity().findViewById(R.id.filter_search_recycler_view);
         iconView.setOnClickListener(this);
 
+        RelativeLayout reputation_rel_layout = view.findViewById(R.id.reputation_rel_layout);
+        reputation_rel_layout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                ((MainActivity) mcontext).getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container_main, new ReputationFragment()).commit();
+
+            }
+        });
+
+
         RelativeLayout inventory_rel_layout = view.findViewById(R.id.inventory_rel_layout);
         inventory_rel_layout.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -111,5 +125,11 @@ public class MyAccountFragment extends Fragment implements View.OnClickListener 
                 break;
         }
 
+    }
+
+    @Override
+    public void onAttach(@NonNull Context context) {
+        super.onAttach(context);
+        mcontext = context;
     }
 }
