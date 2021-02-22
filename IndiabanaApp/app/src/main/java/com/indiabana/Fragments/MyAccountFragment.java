@@ -11,8 +11,6 @@ import android.widget.RelativeLayout;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
-
-import com.indiabana.Activities.InventoryActivity;
 import com.indiabana.Activities.MainActivity;
 import com.indiabana.Adapters.MainFilterRecyclerAdapter;
 import com.indiabana.Data.ListItem;
