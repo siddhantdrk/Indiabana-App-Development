@@ -1,15 +1,15 @@
 package com.indiabana.Fragments;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.RelativeLayout;
 
-import com.indiabana.Activities.InventoryActivity;
 import com.indiabana.Adapters.MainFilterRecyclerAdapter;
 import com.indiabana.Data.ListItem;
+import com.indiabana.Fragments.Inventory.InventoryFragment;
 import com.indiabana.R;
 import com.reim.android.filterrecyclerview.FilterRecyclerView;
 
@@ -73,7 +73,8 @@ public class MyAccountFragment extends Fragment implements View.OnClickListener 
         View view = inflater.inflate(R.layout.fragment_my_account, container, false);
 
         // Hamza Aftab
-        View iconView = getActivity().findViewById(R.id.icon);
+        ImageView iconView = getActivity().findViewById(R.id.icon);
+        iconView.setImageResource(R.drawable.ic_mdi_search);
         filterView = getActivity().findViewById(R.id.filter_search_recycler_view);
         iconView.setOnClickListener(this);
 
@@ -81,7 +82,8 @@ public class MyAccountFragment extends Fragment implements View.OnClickListener 
         inventory_rel_layout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(getActivity(), InventoryActivity.class));
+                getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container_main, new InventoryFragment())
+                        .addToBackStack(null).commit();
             }
         });
         return view;

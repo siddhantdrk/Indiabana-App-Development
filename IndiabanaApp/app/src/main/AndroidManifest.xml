@@ -25,9 +25,6 @@
             </intent-filter>
         </activity>
         <activity android:name=".Activities.LoginActivity" />
-
-        <activity android:name=".Activities.InventoryActivity" />
-        <activity android:name=".Activities.InventoryDetailsActivity" />
         <activity android:name=".Activities.AddProduct.AddProductPriceActivity" />
     </application>
 

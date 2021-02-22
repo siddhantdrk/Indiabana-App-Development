@@ -8,20 +8,20 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
-
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-import androidx.fragment.app.Fragment;
-import androidx.recyclerview.widget.RecyclerView;
+import android.widget.TextView;
 
 import com.indiabana.Activities.AddProduct.AddProductActivity;
-import com.indiabana.Activities.InventoryDetailsActivity;
 import com.indiabana.Adapters.InventoryFragmentRvAdapter;
 import com.indiabana.Data.InventoryRvItem;
 import com.indiabana.Data.OpenNextFragmentFromAdapter;
 import com.indiabana.R;
 
 import java.util.ArrayList;
+
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.RecyclerView;
 
 public class InventoryFragment extends Fragment implements View.OnClickListener, OpenNextFragmentFromAdapter {
     private View rootView;
@@ -40,11 +40,15 @@ public class InventoryFragment extends Fragment implements View.OnClickListener,
         initViews();
         demoRvSetUp();
 
+        TextView textView = getActivity().findViewById(R.id.text);
+        textView.setText(R.string.inventory);
+        ImageView nav_icon = getActivity().findViewById(R.id.nav_icon);
+        nav_icon.setVisibility(View.VISIBLE);
+        ImageView back_icon = getActivity().findViewById(R.id.back_icon);
+        back_icon.setVisibility(View.GONE);
         ImageView iconView = getActivity().findViewById(R.id.icon);
+        iconView.setImageResource(R.drawable.ic_white_plus);
         iconView.setOnClickListener(this);
-
-        View backIcon = getActivity().findViewById(R.id.to_post_activity_back_arrow);
-        backIcon.setOnClickListener(this);
         return rootView;
     }
 
@@ -79,15 +83,13 @@ public class InventoryFragment extends Fragment implements View.OnClickListener,
             case R.id.icon:
                 startActivity(new Intent(getActivity(), AddProductActivity.class));
                 break;
-            case R.id.to_post_activity_back_arrow:
-                getActivity().finish();
         }
     }
 
     @Override
     public void callback() {
-        startActivity(new Intent(getActivity(), InventoryDetailsActivity.class));
-        /*getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container_main, new InventoryDetailsFragment())
-                .addToBackStack(null).commit();*/
+        //startActivity(new Intent(getActivity(), InventoryDetailsActivity.class));
+        getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container_main, new InventoryDetailsFragment())
+                .addToBackStack(null).commit();
     }
 }

@@ -9,12 +9,13 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.PopupMenu;
-
-import androidx.fragment.app.Fragment;
+import android.widget.TextView;
 
 import com.indiabana.Activities.AddProduct.AddProductActivity;
 import com.indiabana.Activities.AddProduct.AddProductPriceActivity;
 import com.indiabana.R;
+
+import androidx.fragment.app.Fragment;
 
 public class InventoryDetailsFragment extends Fragment implements View.OnClickListener, PopupMenu.OnMenuItemClickListener {
 
@@ -62,9 +63,15 @@ public class InventoryDetailsFragment extends Fragment implements View.OnClickLi
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_inventory_details, container, false);
-        View backIcon = getActivity().findViewById(R.id.to_post_activity_back_arrow);
-        backIcon.setOnClickListener(this);
+        TextView textView = getActivity().findViewById(R.id.text);
+        textView.setText(R.string.publication);
+        ImageView nav_icon = getActivity().findViewById(R.id.nav_icon);
+        nav_icon.setVisibility(View.GONE);
+        ImageView back_icon = getActivity().findViewById(R.id.back_icon);
+        back_icon.setVisibility(View.VISIBLE);
+        back_icon.setOnClickListener(this);
         ImageView menuIcon = getActivity().findViewById(R.id.icon);
+        menuIcon.setImageResource(R.drawable.menu);
         menuIcon.setOnClickListener(this);
         LinearLayout layout_name = view.findViewById(R.id.layout_name);
         layout_name.setOnClickListener(this);
@@ -83,8 +90,8 @@ public class InventoryDetailsFragment extends Fragment implements View.OnClickLi
                 popupMenu.inflate(R.menu.toolbar_menu);
                 popupMenu.show();
                 break;
-            case R.id.to_post_activity_back_arrow:
-                getActivity().finish();
+            case R.id.back_icon:
+                getFragmentManager().popBackStackImmediate();
                 break;
             case R.id.layout_name:
                 startActivity(new Intent(getActivity(), AddProductActivity.class));
