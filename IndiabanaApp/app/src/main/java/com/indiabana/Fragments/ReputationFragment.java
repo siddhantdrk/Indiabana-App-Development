@@ -9,15 +9,21 @@ import androidx.fragment.app.Fragment;
 import androidx.viewpager.widget.ViewPager;
 
 import com.google.android.material.tabs.TabLayout;
+import com.indiabana.Adapters.MainFilterRecyclerAdapter;
 import com.indiabana.Adapters.ViewPagerAdapter;
+import com.indiabana.Data.ListItem;
 import com.indiabana.R;
+import com.reim.android.filterrecyclerview.FilterRecyclerView;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * A simple {@link Fragment} subclass.
  * Use the {@link ReputationFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class ReputationFragment extends Fragment {
+public class ReputationFragment extends Fragment implements View.OnClickListener {
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -27,7 +33,7 @@ public class ReputationFragment extends Fragment {
     TabLayout tabLayout;
     ViewPager viewPager;
     ViewPagerAdapter viewPagerAdapter;
-
+    FilterRecyclerView filterView;
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
@@ -68,11 +74,39 @@ public class ReputationFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_reputation, container, false);
+        filterView = getActivity().findViewById(R.id.filter_search_recycler_view);
+        View iconView = getActivity().findViewById(R.id.icon);
+        iconView.setOnClickListener(this);
+
         viewPager = view.findViewById(R.id.viewPager);
         viewPagerAdapter = new ViewPagerAdapter(getActivity().getSupportFragmentManager());
         viewPager.setAdapter(viewPagerAdapter);
         tabLayout = view.findViewById(R.id.tabs);
         tabLayout.setupWithViewPager(viewPager);
         return view;
+    }
+
+    @Override
+    public void onClick(View view) {
+
+        switch (view.getId()) {
+            case R.id.icon:
+
+                filterView.open(true);
+                filterView.setAdapter(new MainFilterRecyclerAdapter(getActivity()));
+
+                List<ListItem> itemList = new ArrayList<>();
+                itemList.add(new ListItem("Iphone XR"));
+                itemList.add(new ListItem("Iphone protector de pantalla"));
+                itemList.add(new ListItem("Iphone 8 plus"));
+                itemList.add(new ListItem("Iphone 5s"));
+                itemList.add(new ListItem("Cargador para iphone"));
+                itemList.add(new ListItem("Cargador para iphone"));
+                itemList.add(new ListItem("Cargador para iphone"));
+                itemList.add(new ListItem("Cargador para iphone"));
+
+                filterView.initializeItemList(itemList);
+                break;
+        }
     }
 }
