@@ -14,6 +14,8 @@ import android.widget.TextView;
 import com.indiabana.Activities.AddProduct.AddProductActivity;
 import com.indiabana.Activities.AddProduct.AddProductPriceActivity;
 import com.indiabana.R;
+import com.synnapps.carouselview.CarouselView;
+import com.synnapps.carouselview.ImageListener;
 
 import androidx.fragment.app.Fragment;
 
@@ -27,6 +29,8 @@ public class InventoryDetailsFragment extends Fragment implements View.OnClickLi
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
+    CarouselView carouselView;
+    int[] sampleImages = {R.drawable.rectangle_23, R.drawable.rectangle_23, R.drawable.rectangle_23};
 
     public InventoryDetailsFragment() {
         // Required empty public constructor
@@ -59,26 +63,12 @@ public class InventoryDetailsFragment extends Fragment implements View.OnClickLi
         }
     }
 
-    @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        View view = inflater.inflate(R.layout.fragment_inventory_details, container, false);
-        TextView textView = getActivity().findViewById(R.id.text);
-        textView.setText(R.string.publication);
-        ImageView nav_icon = getActivity().findViewById(R.id.nav_icon);
-        nav_icon.setVisibility(View.GONE);
-        ImageView back_icon = getActivity().findViewById(R.id.back_icon);
-        back_icon.setVisibility(View.VISIBLE);
-        back_icon.setOnClickListener(this);
-        ImageView menuIcon = getActivity().findViewById(R.id.icon);
-        menuIcon.setImageResource(R.drawable.menu);
-        menuIcon.setOnClickListener(this);
-        LinearLayout layout_name = view.findViewById(R.id.layout_name);
-        layout_name.setOnClickListener(this);
-        LinearLayout layout_price = view.findViewById(R.id.layout_price);
-        layout_price.setOnClickListener(this);
-        return view;
-    }
+    ImageListener imageListener = new ImageListener() {
+        @Override
+        public void setImageForPosition(int position, ImageView imageView) {
+            imageView.setImageResource(sampleImages[position]);
+        }
+    };
 
 
     @Override
@@ -106,5 +96,31 @@ public class InventoryDetailsFragment extends Fragment implements View.OnClickLi
     @Override
     public boolean onMenuItemClick(MenuItem menuItem) {
         return false;
+    }
+
+    @Override
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+        // Inflate the layout for this fragment
+        View view = inflater.inflate(R.layout.fragment_inventory_details, container, false);
+        TextView textView = getActivity().findViewById(R.id.text);
+        textView.setText(R.string.publication);
+        ImageView nav_icon = getActivity().findViewById(R.id.nav_icon);
+        nav_icon.setVisibility(View.GONE);
+        ImageView back_icon = getActivity().findViewById(R.id.back_icon);
+        back_icon.setVisibility(View.VISIBLE);
+        back_icon.setOnClickListener(this);
+        ImageView menuIcon = getActivity().findViewById(R.id.icon);
+        menuIcon.setImageResource(R.drawable.menu);
+        menuIcon.setOnClickListener(this);
+        LinearLayout layout_name = view.findViewById(R.id.layout_name);
+        layout_name.setOnClickListener(this);
+        LinearLayout layout_price = view.findViewById(R.id.layout_price);
+        layout_price.setOnClickListener(this);
+
+        carouselView = view.findViewById(R.id.carouselView);
+        carouselView.setPageCount(sampleImages.length);
+
+        carouselView.setImageListener(imageListener);
+        return view;
     }
 }

@@ -20,6 +20,22 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.synnapps.carouselview.CarouselView
+                    android:id="@+id/carouselView"
+                    android:layout_width="match_parent"
+                    android:layout_height="104dp"
+                    app:fillColor="#FFFFFFFF"
+                    app:pageColor="#00000000"
+                    app:radius="4dp"
+                    app:strokeColor="#FF777777"
+                    app:strokeWidth="1dp" />
+            </androidx.cardview.widget.CardView>
+
             <LinearLayout
                 android:id="@+id/layout_display"
                 android:layout_width="wrap_content"
