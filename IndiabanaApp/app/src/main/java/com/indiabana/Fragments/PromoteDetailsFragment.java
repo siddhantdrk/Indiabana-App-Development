@@ -49,6 +49,8 @@ public class PromoteDetailsFragment extends Fragment implements View.OnClickList
         // Inflate the layout for this fragment
 
         View view = inflater.inflate(R.layout.fragment_promote_details, container, false);
+        View iconView = getActivity().findViewById(R.id.icon);
+        iconView.setOnClickListener(this);
         return view;
     }
 
