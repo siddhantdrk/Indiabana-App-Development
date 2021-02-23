@@ -1,14 +1,13 @@
 package com.indiabana.Fragments.Question;
 
 import android.os.Bundle;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
 
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
 
 import com.indiabana.Adapters.questions.QuestionBuyingRvAdapter;
 import com.indiabana.Data.QuestionRvItem;
@@ -20,6 +19,7 @@ public class BuyingFragment extends Fragment {
     private RecyclerView buyingRecyclerView;
     private QuestionBuyingRvAdapter questionBuyingRvAdapter;
     private ArrayList<QuestionRvItem> questionRvItemArrayList;
+    private View view;
 
     public BuyingFragment() {
         // Required empty public constructor
@@ -30,18 +30,20 @@ public class BuyingFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View view =  inflater.inflate(R.layout.fragment_buying, container, false);
+        view = inflater.inflate(R.layout.fragment_buying, container, false);
+        setUpRv();
+        return view;
+    }
 
+    private void setUpRv() {
         questionRvItemArrayList = new ArrayList<>();
-        QuestionRvItem questionRvItem = new QuestionRvItem("Samsung Glaxy","Samsung WiFi SmartTV with USB C port, 3D and surround sound.",R.drawable.ic_mdi_keyboard_arrow_right_black);
-        QuestionRvItem questionRvItem1 = new QuestionRvItem("Samsung Glaxy","Samsung WiFi SmartTV with USB C port, 3D and surround sound.",R.drawable.ic_mdi_keyboard_arrow_right_black);
-        questionRvItemArrayList.add(questionRvItem);
-        buyingRecyclerView = (RecyclerView) view.findViewById(R.id.buying_recyclerView);
+        QuestionRvItem questionRvItem = new QuestionRvItem("Samsung Glaxy", "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore...", R.drawable.ic_mdi_keyboard_arrow_right_black);
+        for (int i = 0; i < 2; i++)
+            questionRvItemArrayList.add(questionRvItem);
+        buyingRecyclerView = view.findViewById(R.id.buying_recyclerView);
         LinearLayoutManager layoutManager = new LinearLayoutManager(view.getContext());
         buyingRecyclerView.setLayoutManager(layoutManager);
         questionBuyingRvAdapter = new QuestionBuyingRvAdapter(questionRvItemArrayList);
         buyingRecyclerView.setAdapter(questionBuyingRvAdapter);
-
-        return view;
     }
 }
