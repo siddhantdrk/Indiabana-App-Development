@@ -32,7 +32,13 @@ public class AddProductAmountActivityRvAdapter extends RecyclerView.Adapter<AddP
 
     @Override
     public void onBindViewHolder(@NonNull AddProductAmountActivityRvAdapter.ViewHolder holder, int position) {
-        holder.product_img.setImageResource(productAmountRvItemsArrayList.get(position).getProduct_img());
+        if (productAmountRvItemsArrayList.get(position).getProduct_img() != 0) {
+            holder.product_img.setImageResource(productAmountRvItemsArrayList.get(position).getProduct_img());
+            holder.bg_img.setVisibility(View.GONE);
+        } else {
+
+        }
+
     }
 
     @Override
@@ -41,11 +47,12 @@ public class AddProductAmountActivityRvAdapter extends RecyclerView.Adapter<AddP
     }
 
     class ViewHolder extends RecyclerView.ViewHolder {
-        ImageView product_img;
+        ImageView product_img, bg_img;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
             product_img = itemView.findViewById(R.id.product_img);
+            bg_img = itemView.findViewById(R.id.bg_img);
         }
     }
 }

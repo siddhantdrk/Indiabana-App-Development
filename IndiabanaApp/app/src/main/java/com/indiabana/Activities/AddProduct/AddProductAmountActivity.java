@@ -33,7 +33,9 @@ public class AddProductAmountActivity extends AppCompatActivity implements View.
         ArrayList<ProductAmountRvItem> productAmountRvItemArrayList = new ArrayList<>();
         productAmountRvItemArrayList.add(new ProductAmountRvItem(R.drawable.rectangle_104));
         productAmountRvItemArrayList.add(new ProductAmountRvItem(R.drawable.rectangle_101));
-        productAmountRvItemArrayList.add(new ProductAmountRvItem(R.drawable.ic_mdi_add_photo_alternate));
+        productAmountRvItemArrayList.add(new ProductAmountRvItem(0));
+        productAmountRvItemArrayList.add(new ProductAmountRvItem(0));
+        productAmountRvItemArrayList.add(new ProductAmountRvItem(0));
         AddProductAmountActivityRvAdapter addProductAmountActivityRvAdapter = new AddProductAmountActivityRvAdapter(AddProductAmountActivity.this, productAmountRvItemArrayList);
         productiamgeRv.setAdapter(addProductAmountActivityRvAdapter);
     }
