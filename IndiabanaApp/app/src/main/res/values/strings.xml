@@ -436,5 +436,11 @@
     <string name="stock4">Limited stock (1 unit)</string>
     <string name="percent4">20% of the sale price</string>
     <string name="ready_to_sale">Great! Get ready to sell.</string>
+    <string name="photo_gallery">Photo gallery</string>
+    <string name="produce_description">Product description</string>
+    <string name="describe_product">Describe your product</string>
+    <string name="describe_product_remember">Remember that you cannot include contact information and you are responsible for what you post here</string>
+    <string name="quantity_available">Quantity Available</string>
+
     <!--  My Account  -->
 </resources>
