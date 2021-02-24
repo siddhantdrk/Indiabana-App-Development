@@ -12,6 +12,7 @@ import android.widget.PopupMenu;
 import android.widget.TextView;
 
 import com.indiabana.Activities.AddProduct.AddProductActivity;
+import com.indiabana.Activities.AddProduct.AddProductAmountActivity;
 import com.indiabana.Activities.AddProduct.AddProductPriceActivity;
 import com.indiabana.R;
 import com.synnapps.carouselview.CarouselView;
@@ -89,7 +90,9 @@ public class InventoryDetailsFragment extends Fragment implements View.OnClickLi
             case R.id.layout_price:
                 startActivity(new Intent(getActivity(), AddProductPriceActivity.class));
                 break;
-
+            case R.id.layout_amount:
+                startActivity(new Intent(getActivity(), AddProductAmountActivity.class));
+                break;
         }
     }
 
@@ -116,6 +119,8 @@ public class InventoryDetailsFragment extends Fragment implements View.OnClickLi
         layout_name.setOnClickListener(this);
         LinearLayout layout_price = view.findViewById(R.id.layout_price);
         layout_price.setOnClickListener(this);
+        LinearLayout layout_amount = view.findViewById(R.id.layout_amount);
+        layout_amount.setOnClickListener(this);
 
         carouselView = view.findViewById(R.id.carouselView);
         carouselView.setPageCount(sampleImages.length);

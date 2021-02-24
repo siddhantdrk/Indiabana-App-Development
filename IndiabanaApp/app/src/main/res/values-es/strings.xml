@@ -441,5 +441,10 @@ que pueda ser identificada</string>
     <string name="stock4">Stock limitado (1 unidad)</string>
     <string name="percent4">20% sobre el precio de venta</string>
     <string name="ready_to_sale">¡Genial! Prepárate para vender.</string>
+    <string name="photo_gallery">Galería de fotos</string>
+    <string name="produce_description">Descripción del producto</string>
+    <string name="describe_product">Describe tu producto</string>
+    <string name="describe_product_remember">Recuerda que no puedes incluir información de contacto, y eres responsable por lo que se publica aquí.</string>
+    <string name="quantity_available">Cantidad disponible</string>
     <!--  My Account  -->
 </resources>
