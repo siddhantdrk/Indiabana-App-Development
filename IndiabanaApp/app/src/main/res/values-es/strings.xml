@@ -445,5 +445,16 @@ que pueda ser identificada</string>
     <string name="describe_product">Describe tu producto</string>
     <string name="describe_product_remember">Recuerda que no puedes incluir información de contacto, y eres responsable por lo que se publica aquí.</string>
     <string name="quantity_available">Cantidad disponible</string>
+    <string name="shipping_method">Método de envío</string>
+    <string name="select_method">Seleccione todos los métodos que desee utilizar</string>
+    <string name="icarrys">iCarrys</string>
+    <string name="store_pickup">Recoger en tienda</string>
+    <string name="others">Otros</string>
+    <string name="shipping_costs">Gastos de envío</string>
+    <string name="behalf_of_seller">Por cuenta del vendedor (tú pagas)</string>
+    <string name="behalf_of_buyer">Por cuenta del comprador</string>
+    <string name="shipping_price_through_others">Precio del envió mediante "Otros"</string>
+    <string name="shipping_company">Empresa de envío</string>
+
     <!--  My Account  -->
 </resources>

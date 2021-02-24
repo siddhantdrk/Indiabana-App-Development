@@ -441,6 +441,16 @@
     <string name="describe_product">Describe your product</string>
     <string name="describe_product_remember">Remember that you cannot include contact information and you are responsible for what you post here</string>
     <string name="quantity_available">Quantity Available</string>
+    <string name="shipping_method">Shipping method</string>
+    <string name="select_method">Select all the methods you want to use</string>
+    <string name="icarrys">iCarrys</string>
+    <string name="store_pickup">Store Pickup</string>
+    <string name="others">Others</string>
+    <string name="shipping_costs">Shipping costs</string>
+    <string name="behalf_of_seller">On behalf of the seller (you pay)</string>
+    <string name="behalf_of_buyer">On behalf of the buyer</string>
+    <string name="shipping_price_through_others">Shipping price through "Others"</string>
+    <string name="shipping_company">Shipping company</string>
 
     <!--  My Account  -->
 </resources>

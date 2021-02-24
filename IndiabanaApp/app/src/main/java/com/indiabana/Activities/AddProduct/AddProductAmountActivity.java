@@ -1,10 +1,12 @@
 package com.indiabana.Activities.AddProduct;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.PopupMenu;
 
+import com.google.android.material.button.MaterialButton;
 import com.indiabana.Adapters.AddProductAmountActivityRvAdapter;
 import com.indiabana.Data.ProductAmountRvItem;
 import com.indiabana.R;
@@ -16,6 +18,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 public class AddProductAmountActivity extends AppCompatActivity implements View.OnClickListener, PopupMenu.OnMenuItemClickListener {
     private RecyclerView productiamgeRv;
+    private MaterialButton continue_btn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,6 +29,8 @@ public class AddProductAmountActivity extends AppCompatActivity implements View.
         View iconView = findViewById(R.id.icon);
         iconView.setOnClickListener(this);
         productiamgeRv = findViewById(R.id.productiamge_rv);
+        continue_btn = findViewById(R.id.continue_btn);
+        continue_btn.setOnClickListener(this);
         demoRvSetUp();
     }
 
@@ -51,6 +56,9 @@ public class AddProductAmountActivity extends AppCompatActivity implements View.
                 break;
             case R.id.to_post_activity_back_arrow:
                 finish();
+                break;
+            case R.id.continue_btn:
+                startActivity(new Intent(AddProductAmountActivity.this, AddProductShippingActivity.class));
                 break;
         }
     }

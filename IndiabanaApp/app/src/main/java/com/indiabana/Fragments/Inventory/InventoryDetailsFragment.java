@@ -88,9 +88,11 @@ public class InventoryDetailsFragment extends Fragment implements View.OnClickLi
                 startActivity(new Intent(getActivity(), AddProductActivity.class));
                 break;
             case R.id.layout_price:
+            case R.id.layout_post_type:
                 startActivity(new Intent(getActivity(), AddProductPriceActivity.class));
                 break;
             case R.id.layout_amount:
+            case R.id.layout_description:
                 startActivity(new Intent(getActivity(), AddProductAmountActivity.class));
                 break;
         }
@@ -121,6 +123,10 @@ public class InventoryDetailsFragment extends Fragment implements View.OnClickLi
         layout_price.setOnClickListener(this);
         LinearLayout layout_amount = view.findViewById(R.id.layout_amount);
         layout_amount.setOnClickListener(this);
+        LinearLayout layout_description = view.findViewById(R.id.layout_description);
+        layout_description.setOnClickListener(this);
+        LinearLayout layout_post_type = view.findViewById(R.id.layout_post_type);
+        layout_post_type.setOnClickListener(this);
 
         carouselView = view.findViewById(R.id.carouselView);
         carouselView.setPageCount(sampleImages.length);
