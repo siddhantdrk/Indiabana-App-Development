@@ -451,6 +451,18 @@
     <string name="behalf_of_buyer">On behalf of the buyer</string>
     <string name="shipping_price_through_others">Shipping price through "Others"</string>
     <string name="shipping_company">Shipping company</string>
+    <string name="used">Used</string>
+    <string name="reconditioned">Reconditioned</string>
+    <string name="warranty">Warranty</string>
+    <string name="seller_warranty">Seller warranty</string>
+    <string name="warranty_time">Warranty time</string>
+    <string name="days">Days</string>
+    <string name="factory_warranty">Factory warranty</string>
+    <string name="no_warranty">No warranty</string>
+    <string name="warranty_prompt">Dias</string>
+    <string-array name="warranty_arrays">
+        <item>Dias</item>
+    </string-array>
 
     <!--  My Account  -->
 </resources>

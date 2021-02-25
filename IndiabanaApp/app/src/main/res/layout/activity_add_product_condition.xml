@@ -1,0 +1,377 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/dark_azyl"
+    tools:context=".Activities.AddProduct.AddProductConditionActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/activity_to_post_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:layout_alignParentTop="true"
+        android:background="@color/dark_azyl"
+        android:elevation="4dp">
+
+        <ImageView
+            android:id="@+id/to_post_activity_back_arrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_mdi_keyboard_arrow_left_white" />
+
+        <ImageView
+            android:id="@+id/icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_marginEnd="12dp"
+            android:src="@drawable/menu" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:fontFamily="@font/roboto_bold"
+            android:gravity="center"
+            android:text="@string/add_product"
+            android:textColor="@color/white"
+            android:textSize="22sp" />
+    </androidx.appcompat.widget.Toolbar>
+
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/continue_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="32dp"
+        android:backgroundTint="@color/indiabana_orange"
+        android:paddingHorizontal="24dp"
+        android:paddingVertical="16dp"
+        android:text="@string/continue_post"
+        android:textAllCaps="false"
+        android:textSize="18sp"
+        app:cornerRadius="5dp" />
+
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_above="@id/continue_btn"
+        android:layout_below="@id/activity_to_post_toolbar"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="-20dp"
+        app:cardBackgroundColor="@color/activity_bg_color"
+        app:cardCornerRadius="20dp"
+        app:cardElevation="0dp"
+        app:contentPaddingTop="20dp">
+
+        <ScrollView
+            android:id="@+id/frameLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="64dp">
+
+                <TextView
+                    android:id="@+id/textView_warranty"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    android:fontFamily="@font/roboto_bold"
+                    android:text="@string/warranty"
+                    android:textColor="@color/text2"
+                    android:textSize="14sp"
+                    app:layout_constraintBottom_toTopOf="@+id/layout_warranty"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/layout_product_condition" />
+
+                <TextView
+                    android:id="@+id/textView_product_condition"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="12dp"
+                    android:fontFamily="@font/roboto_bold"
+                    android:text="@string/publication_product_condition"
+                    android:textColor="@color/text2"
+                    android:textSize="14sp"
+                    app:layout_constraintBottom_toTopOf="@+id/layout_product_condition"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/layout_warranty"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:background="@color/white"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView_warranty">
+
+                    <EditText
+                        android:id="@+id/quantity_warranty_time"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="16dp"
+                        android:layout_marginStart="16dp"
+                        android:hint="Ej. 30"
+                        android:inputType="number"
+                        android:padding="10dp"
+                        android:textColor="@color/dateColor"
+                        android:textSize="14sp"
+                        app:layout_constraintEnd_toStartOf="@+id/warranty_time_btn"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/textView_warranty_time" />
+
+                    <ImageView
+                        android:id="@+id/seller_warranty_check"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="16dp"
+                        android:layout_marginTop="16dp"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/ic_mdi_check_circle"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintRight_toLeftOf="@+id/textView_seller_warranty"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/textView_seller_warranty"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="16dp"
+                        android:fontFamily="@font/roboto_regular"
+                        android:text="@string/seller_warranty"
+                        android:textColor="@color/text2"
+                        android:textSize="14sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/textView_warranty_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="16dp"
+                        android:fontFamily="@font/roboto_bold"
+                        android:text="@string/warranty_time"
+                        android:textColor="@color/text2"
+                        android:textSize="12sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/view_seller_warranty" />
+
+                    <TextView
+                        android:id="@+id/textView_factory_warranty"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="16dp"
+                        android:fontFamily="@font/roboto_regular"
+                        android:text="@string/factory_warranty"
+                        android:textColor="@color/text2"
+                        android:textSize="14sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/view_warranty_time" />
+
+                    <TextView
+                        android:id="@+id/textView_no_warranty"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="16dp"
+                        android:fontFamily="@font/roboto_regular"
+                        android:paddingBottom="16dp"
+                        android:text="@string/no_warranty"
+                        android:textColor="@color/text2"
+                        android:textSize="14sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/view_factory_warranty" />
+
+                    <!-- <Spinner
+                         android:id="@+id/spinner_warranty_time"
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:layout_marginEnd="16dp"
+                         android:background="@drawable/spinner_round_corner"
+                         android:entries="@array/warranty_arrays"
+                         android:prompt="@string/warranty_prompt"
+                         android:paddingTop="12dp"
+                         android:paddingBottom="12dp"
+                         android:paddingLeft="16dp"
+                         android:paddingRight="16dp"
+                         app:layout_constraintEnd_toEndOf="parent"
+                         android:theme="@style/spinner_style1"
+                         android:dropDownWidth="fill_parent"
+                         app:layout_constraintTop_toBottomOf="@+id/textView_warranty_time"
+                         app:layout_constraintRight_toLeftOf="@+id/quantity_warranty_time"
+                         android:visibility="gone"/>-->
+
+                    <View
+                        android:id="@+id/view_seller_warranty"
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:layout_marginTop="16dp"
+                        android:alpha="0.5"
+                        android:background="@color/stroke"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/textView_seller_warranty" />
+
+                    <View
+                        android:id="@+id/view_warranty_time"
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:layout_marginTop="16dp"
+                        android:alpha="0.5"
+                        android:background="@color/stroke"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/quantity_warranty_time" />
+
+                    <View
+                        android:id="@+id/view_factory_warranty"
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:layout_marginTop="16dp"
+                        android:alpha="0.5"
+                        android:background="@color/stroke"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/textView_factory_warranty" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/warranty_time_btn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="16dp"
+                        android:background="@drawable/spinner_round_corner"
+                        android:backgroundTint="@color/white"
+                        android:fontFamily="@font/roboto_regular"
+                        android:paddingHorizontal="28dp"
+                        android:text="Dias"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white"
+                        android:textSize="14sp"
+                        app:icon="@drawable/ic_spinner_drop_downsvg"
+                        app:iconGravity="textEnd"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/textView_warranty_time" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/layout_product_condition"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:background="@color/white"
+                    app:layout_constraintBottom_toTopOf="@+id/textView_warranty"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView_product_condition">
+
+                    <ImageView
+                        android:id="@+id/icarry_check"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="16dp"
+                        android:layout_marginTop="16dp"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/ic_mdi_check_circle"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <ImageView
+                        android:id="@+id/reconditioned_info"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="16dp"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/ic_mdi_info"
+                        app:layout_constraintStart_toEndOf="@+id/textView_reconditioned"
+                        app:layout_constraintTop_toBottomOf="@id/view_store_pickup" />
+
+                    <TextView
+                        android:id="@+id/textView_reconditioned"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="16dp"
+                        android:fontFamily="@font/roboto_regular"
+                        android:paddingBottom="16dp"
+                        android:text="@string/reconditioned"
+                        android:textColor="@color/text2"
+                        android:textSize="14sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/view_store_pickup" />
+
+                    <TextView
+                        android:id="@+id/textView_new"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="16dp"
+                        android:fontFamily="@font/roboto_regular"
+                        android:text="@string/publication_new"
+                        android:textColor="@color/text2"
+                        android:textSize="14sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/textView_used"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="16dp"
+                        android:fontFamily="@font/roboto_regular"
+                        android:text="@string/used"
+                        android:textColor="@color/text2"
+                        android:textSize="14sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/view_icarry" />
+
+                    <View
+                        android:id="@+id/view_icarry"
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:layout_marginTop="16dp"
+                        android:alpha="0.5"
+                        android:background="@color/stroke"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/textView_new" />
+
+                    <View
+                        android:id="@+id/view_store_pickup"
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:layout_marginTop="16dp"
+                        android:alpha="0.5"
+                        android:background="@color/stroke"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/textView_used" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </ScrollView>
+
+    </com.google.android.material.card.MaterialCardView>
+
+
+</RelativeLayout>

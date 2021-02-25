@@ -455,6 +455,18 @@ que pueda ser identificada</string>
     <string name="behalf_of_buyer">Por cuenta del comprador</string>
     <string name="shipping_price_through_others">Precio del envió mediante "Otros"</string>
     <string name="shipping_company">Empresa de envío</string>
+    <string name="used">Usado</string>
+    <string name="reconditioned">Reacondicionado</string>
+    <string name="warranty">Garantía</string>
+    <string name="seller_warranty">Garantía por el vendedor</string>
+    <string name="warranty_time">Tiempo de garantía</string>
+    <string name="days">Días</string>
+    <string name="factory_warranty">Garantía de fábrica</string>
+    <string name="no_warranty">Sin Garantía</string>
+    <string name="warranty_prompt">Dias</string>
+    <string-array name="warranty_arrays">
+        <item>Dias</item>
+    </string-array>
 
     <!--  My Account  -->
 </resources>
