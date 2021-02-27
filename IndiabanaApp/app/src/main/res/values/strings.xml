@@ -464,6 +464,10 @@
     <string-array name="warranty_arrays">
         <item>Dias</item>
     </string-array>
-
+    <string name="data_sheet">Product data sheet</string>
+    <string name="data_sheet_value">Having a complete technical file will allow you to position better and obtain a greater number of allies</string>
+    <string name="screen_size">Screen size:</string>
+    <string name="example_card">Example card:</string>
+    <string name="sample_response">Sample response</string>
     <!--  My Account  -->
 </resources>

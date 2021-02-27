@@ -14,6 +14,7 @@ import android.widget.TextView;
 import com.indiabana.Activities.AddProduct.AddProductActivity;
 import com.indiabana.Activities.AddProduct.AddProductAmountActivity;
 import com.indiabana.Activities.AddProduct.AddProductConditionActivity;
+import com.indiabana.Activities.AddProduct.AddProductDatasheetActivity;
 import com.indiabana.Activities.AddProduct.AddProductPriceActivity;
 import com.indiabana.R;
 import com.synnapps.carouselview.CarouselView;
@@ -99,6 +100,10 @@ public class InventoryDetailsFragment extends Fragment implements View.OnClickLi
             case R.id.layout_product_condition:
                 startActivity(new Intent(getActivity(), AddProductConditionActivity.class));
                 break;
+            case R.id.layout_data_sheet:
+            case R.id.layout_warranty:
+                startActivity(new Intent(getActivity(), AddProductDatasheetActivity.class));
+                break;
         }
     }
 
@@ -133,6 +138,10 @@ public class InventoryDetailsFragment extends Fragment implements View.OnClickLi
         layout_post_type.setOnClickListener(this);
         LinearLayout layout_product_condition = view.findViewById(R.id.layout_product_condition);
         layout_product_condition.setOnClickListener(this);
+        LinearLayout layout_data_sheet = view.findViewById(R.id.layout_data_sheet);
+        layout_data_sheet.setOnClickListener(this);
+        LinearLayout layout_warranty = view.findViewById(R.id.layout_warranty);
+        layout_warranty.setOnClickListener(this);
 
         carouselView = view.findViewById(R.id.carouselView);
         carouselView.setPageCount(sampleImages.length);

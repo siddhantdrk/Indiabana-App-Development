@@ -468,6 +468,10 @@ que pueda ser identificada</string>
     <string-array name="warranty_arrays">
         <item>Dias</item>
     </string-array>
-
+    <string name="data_sheet">Ficha técnica del producto</string>
+    <string name="data_sheet_value">Tener una ficha técnica completa te permitiráposicionar mejor y obtener mayor número de aliados</string>
+    <string name="screen_size">Tamaño de la pantalla:</string>
+    <string name="example_card">Ficha de ejemplo:</string>
+    <string name="sample_response">Respuesta de ejemplo</string>
     <!--  My Account  -->
 </resources>
