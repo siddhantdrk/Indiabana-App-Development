@@ -1,12 +1,12 @@
 package com.indiabana.Activities;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.viewpager2.widget.ViewPager2;
-
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.viewpager2.widget.ViewPager2;
 
 import com.google.android.material.tabs.TabLayout;
 import com.google.android.material.tabs.TabLayoutMediator;
@@ -19,6 +19,8 @@ public class AllianceRequestActivityTemp extends AppCompatActivity implements Vi
     TabLayout tabLayout;
     AllianceRequestPagerAdapter adapter;
     ImageView backIcon;
+
+    //new commemt
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

@@ -24,6 +24,8 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="12dp"
         android:layout_marginTop="12dp"
+        android:maxLines="2"
+        android:ellipsize="end"
         android:fontFamily="@font/roboto_bold"
         android:text="SmartTV Samsung Wifi con puerto USB, 3D, sonido envolvente"
         android:textColor="@color/black"

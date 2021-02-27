@@ -6,6 +6,7 @@
     android:background="@color/activity_bg_color">
 
     <LinearLayout
+        android:id="@+id/tab_layout_container"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintTop_toTopOf="parent"
@@ -23,29 +24,15 @@
             app:tabTextColor="#828282"
             app:tabBackground="@drawable/question_fragment_tab_layout_selector"
             app:tabIndicatorHeight="0dp"
-            android:layout_height="wrap_content"
-
-            >
-            <com.google.android.material.tabs.TabItem
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:text="@string/buying"
-                />
-            <com.google.android.material.tabs.TabItem
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:text="@string/selling"
-                />
-        </com.google.android.material.tabs.TabLayout>
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/recycler_view"
-            android:orientation="vertical"
-            android:background="#e5e5e5"
-            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            />
+            android:layout_height="wrap_content" />
     </LinearLayout>
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/question_viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/tab_layout_container"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

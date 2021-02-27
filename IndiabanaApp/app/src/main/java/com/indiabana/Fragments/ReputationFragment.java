@@ -1,20 +1,17 @@
 package com.indiabana.Fragments;
 
-import android.content.Context;
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
-import android.widget.RelativeLayout;
 
-import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
-import com.indiabana.Activities.MainActivity;
+import androidx.viewpager.widget.ViewPager;
+
+import com.google.android.material.tabs.TabLayout;
 import com.indiabana.Adapters.MainFilterRecyclerAdapter;
+import com.indiabana.Adapters.ViewPagerAdapter;
 import com.indiabana.Data.ListItem;
-import com.indiabana.Fragments.Inventory.InventoryFragment;
 import com.indiabana.R;
 import com.reim.android.filterrecyclerview.FilterRecyclerView;
 
@@ -23,23 +20,25 @@ import java.util.List;
 
 /**
  * A simple {@link Fragment} subclass.
- * Use the {@link MyAccountFragment#newInstance} factory method to
+ * Use the {@link ReputationFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class MyAccountFragment extends Fragment implements View.OnClickListener {
+public class ReputationFragment extends Fragment implements View.OnClickListener {
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
 
+    TabLayout tabLayout;
+    ViewPager viewPager;
+    ViewPagerAdapter viewPagerAdapter;
+    FilterRecyclerView filterView;
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
-    FilterRecyclerView filterView;
-    Context mcontext;
 
-    public MyAccountFragment() {
+    public ReputationFragment() {
         // Required empty public constructor
     }
 
@@ -49,11 +48,11 @@ public class MyAccountFragment extends Fragment implements View.OnClickListener 
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment MyAccountFragment.
+     * @return A new instance of fragment Reputation_seller_buyerFragment.
      */
     // TODO: Rename and change types and number of parameters
-    public static MyAccountFragment newInstance(String param1, String param2) {
-        MyAccountFragment fragment = new MyAccountFragment();
+    public static ReputationFragment newInstance(String param1, String param2) {
+        ReputationFragment fragment = new ReputationFragment();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -74,39 +73,22 @@ public class MyAccountFragment extends Fragment implements View.OnClickListener 
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View view = inflater.inflate(R.layout.fragment_my_account, container, false);
-
-        // Hamza Aftab
-        ImageView iconView = getActivity().findViewById(R.id.icon);
-        iconView.setImageResource(R.drawable.ic_mdi_search);
+        View view = inflater.inflate(R.layout.fragment_reputation, container, false);
         filterView = getActivity().findViewById(R.id.filter_search_recycler_view);
+        View iconView = getActivity().findViewById(R.id.icon);
         iconView.setOnClickListener(this);
 
-        RelativeLayout reputation_rel_layout = view.findViewById(R.id.reputation_rel_layout);
-        reputation_rel_layout.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                ((MainActivity) mcontext).getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container_main, new ReputationFragment()).commit();
-
-            }
-        });
-
-
-        RelativeLayout inventory_rel_layout = view.findViewById(R.id.inventory_rel_layout);
-        inventory_rel_layout.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container_main, new InventoryFragment())
-                        .addToBackStack(null).commit();
-            }
-        });
+        viewPager = view.findViewById(R.id.viewPager);
+        viewPagerAdapter = new ViewPagerAdapter(getActivity().getSupportFragmentManager());
+        viewPager.setAdapter(viewPagerAdapter);
+        tabLayout = view.findViewById(R.id.tabs);
+        tabLayout.setupWithViewPager(viewPager);
         return view;
     }
 
     @Override
     public void onClick(View view) {
 
-        // Hamza Aftab
         switch (view.getId()) {
             case R.id.icon:
 
@@ -126,12 +108,5 @@ public class MyAccountFragment extends Fragment implements View.OnClickListener 
                 filterView.initializeItemList(itemList);
                 break;
         }
-
-    }
-
-    @Override
-    public void onAttach(@NonNull Context context) {
-        super.onAttach(context);
-        mcontext = context;
     }
 }

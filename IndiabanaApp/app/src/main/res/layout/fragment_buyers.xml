@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".Fragments.BuyersFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        tools:ignore="MissingConstraints">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="1dp"
+            android:background="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/request_potential_rv_item_img"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:src="@drawable/ic_launcher_background" />
+
+            <TextView
+                android:id="@+id/requests_potential_rv_item_title"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="36dp"
+                android:layout_toEndOf="@+id/request_potential_rv_item_img"
+                android:fontFamily="@font/roboto_bold"
+                android:text="@string/zapateria_don_calos"
+                android:textColor="@color/black"
+                android:textSize="14sp" />
+
+            <RatingBar
+                android:id="@+id/rating_bar_requests"
+                style="?android:attr/ratingBarStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/requests_potential_rv_item_title"
+                android:layout_marginStart="16dp"
+                android:layout_toEndOf="@+id/request_potential_rv_item_img"
+                android:numStars="5"
+                android:progressTint="@color/indiabana_orange"
+                android:rating="4"
+                android:scaleX="1"
+                android:scaleY="1"
+                android:stepSize=".1"
+                android:transformPivotX="0dp"
+                android:transformPivotY="0dp" />
+
+            <TextView
+                android:id="@+id/rating_txt_requests"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/requests_potential_rv_item_title"
+                android:layout_toEndOf="@+id/rating_bar_requests"
+                android:fontFamily="@font/roboto_regular"
+                android:text="4/5"
+                android:textColor="@color/black"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/requests_detail"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/rating_bar_requests"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="36dp"
+                android:layout_toEndOf="@+id/request_potential_rv_item_img"
+                android:fontFamily="@font/roboto_regular"
+                android:text="@string/av_12_con_calle_3_y_6_esquina_el_marquez_caballito_caba_argentina"
+                android:textColor="@color/black"
+                android:textSize="14sp" />
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="15dp"
+            android:background="@color/gray"></View>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="1dp"
+            android:background="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/request_potential_rv_item_img2"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:src="@drawable/ic_launcher_background" />
+
+            <TextView
+                android:id="@+id/requests_potential_rv_item_title2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="36dp"
+                android:layout_toEndOf="@+id/request_potential_rv_item_img2"
+                android:fontFamily="@font/roboto_bold"
+                android:text="@string/zapateria_don_calos"
+                android:textColor="@color/black"
+                android:textSize="14sp" />
+
+            <RatingBar
+                android:id="@+id/rating_bar_requests2"
+                style="?android:attr/ratingBarStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/requests_potential_rv_item_title2"
+                android:layout_marginStart="16dp"
+                android:layout_toEndOf="@+id/request_potential_rv_item_img2"
+                android:numStars="5"
+                android:progressTint="@color/indiabana_orange"
+                android:rating="4"
+                android:scaleX="1"
+                android:scaleY="1"
+                android:stepSize=".1"
+                android:transformPivotX="0dp"
+                android:transformPivotY="0dp" />
+
+            <TextView
+                android:id="@+id/rating_txt_requests2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/requests_potential_rv_item_title2"
+                android:layout_toEndOf="@+id/rating_bar_requests2"
+                android:fontFamily="@font/roboto_regular"
+                android:text="4/5"
+                android:textColor="@color/black"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/requests_detail2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/rating_bar_requests2"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="36dp"
+                android:layout_toEndOf="@+id/request_potential_rv_item_img2"
+                android:fontFamily="@font/roboto_regular"
+                android:text="@string/av_12_con_calle_3_y_6_esquina_el_marquez_caballito_caba_argentina"
+                android:textColor="@color/black"
+                android:textSize="14sp" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

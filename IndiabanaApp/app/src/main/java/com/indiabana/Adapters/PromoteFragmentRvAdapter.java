@@ -10,7 +10,9 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.indiabana.Activities.MainActivity;
 import com.indiabana.Data.PromotePublicationRvItem;
+import com.indiabana.Fragments.PromoteDetailsFragment;
 import com.indiabana.R;
 
 import java.util.ArrayList;
@@ -38,6 +40,15 @@ public class PromoteFragmentRvAdapter extends RecyclerView.Adapter<PromoteFragme
         holder.title.setText(promotePublicationRvItemArrayList.get(position).getTitle());
         holder.price.setText(promotePublicationRvItemArrayList.get(position).getPrice());
         holder.publicationType.setText(promotePublicationRvItemArrayList.get(position).getPublicationType());
+
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                ((MainActivity) context).getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container_main, new PromoteDetailsFragment()).commit();
+
+            }
+        });
     }
 
     @Override

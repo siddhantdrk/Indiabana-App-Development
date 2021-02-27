@@ -76,6 +76,8 @@
             android:layout_height="wrap_content"
             android:layout_below="@id/myAlliance_rating_bar"
             android:layout_alignParentEnd="true"
+            android:maxLines="2"
+            android:ellipsize="end"
             android:layout_marginStart="16dp"
             android:layout_marginEnd="36dp"
             android:layout_marginBottom="16dp"

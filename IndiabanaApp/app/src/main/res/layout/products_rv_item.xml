@@ -30,6 +30,8 @@
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
             android:layout_alignParentEnd="true"
+            android:maxLines="2"
+            android:ellipsize="end"
             android:layout_marginStart="16dp"
             android:layout_marginTop="20dp"
             android:layout_marginEnd="16dp"
@@ -48,7 +50,7 @@
             android:layout_marginTop="4dp"
             android:layout_toEndOf="@id/order_detail_product_imageView"
             android:fontFamily="@font/roboto_regular"
-            android:text="@string/price_txt"
+            android:text="@string/price_txt_2"
             android:textColor="@color/black"
             android:textSize="14sp" />
 

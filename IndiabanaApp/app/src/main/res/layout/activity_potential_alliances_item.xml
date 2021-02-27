@@ -45,12 +45,12 @@
     </androidx.appcompat.widget.Toolbar>
 
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/cart_continue_btn"
+        android:id="@+id/send_request_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginEnd="32dp"
+        android:layout_marginEnd="16dp"
         android:layout_marginBottom="8dp"
         android:backgroundTint="@color/indiabana_orange"
         android:paddingHorizontal="24dp"
@@ -60,29 +60,27 @@
         android:textSize="18sp"
         app:cornerRadius="5dp" />
 
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/refuse_btn"
+    <TextView
+        android:id="@+id/refuse_txt_btn"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="32dp"
-        android:layout_marginBottom="8dp"
-        android:textColor="@color/colorRed"
-        android:backgroundTint="@android:color/transparent"
+        android:layout_height="0dp"
+        android:layout_alignTop="@+id/send_request_btn"
+        android:layout_alignBottom="@id/send_request_btn"
+        android:layout_marginStart="16dp"
         android:paddingHorizontal="24dp"
         android:paddingVertical="16dp"
         android:text="@string/rule_out"
+        android:gravity="center"
         android:textAllCaps="false"
-        android:textSize="18sp"
-        app:cornerRadius="5dp" />
+        android:textColor="@color/colorRed"
+        android:textSize="18sp" />
 
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/material_card"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:elevation="0dp"
-        android:layout_above="@id/cart_continue_btn"
+        android:layout_above="@id/send_request_btn"
         android:layout_below="@+id/cl_image"
         android:layout_marginBottom="8dp"
         android:layout_marginTop="-20dp"

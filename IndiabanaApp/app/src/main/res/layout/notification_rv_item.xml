@@ -36,6 +36,8 @@
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="8dp"
         android:layout_marginBottom="16dp"
+        android:maxLines="2"
+        android:ellipsize="end"
         android:fontFamily="@font/roboto_medium"
         android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor..."
         app:layout_constraintBottom_toBottomOf="parent"
