@@ -446,5 +446,32 @@ que pueda ser identificada</string>
     <string name="describe_product">Describe tu producto</string>
     <string name="describe_product_remember">Recuerda que no puedes incluir información de contacto, y eres responsable por lo que se publica aquí.</string>
     <string name="quantity_available">Cantidad disponible</string>
+    <string name="shipping_method">Método de envío</string>
+    <string name="select_method">Seleccione todos los métodos que desee utilizar</string>
+    <string name="icarrys">iCarrys</string>
+    <string name="store_pickup">Recoger en tienda</string>
+    <string name="others">Otros</string>
+    <string name="shipping_costs">Gastos de envío</string>
+    <string name="behalf_of_seller">Por cuenta del vendedor (tú pagas)</string>
+    <string name="behalf_of_buyer">Por cuenta del comprador</string>
+    <string name="shipping_price_through_others">Precio del envió mediante "Otros"</string>
+    <string name="shipping_company">Empresa de envío</string>
+    <string name="used">Usado</string>
+    <string name="reconditioned">Reacondicionado</string>
+    <string name="warranty">Garantía</string>
+    <string name="seller_warranty">Garantía por el vendedor</string>
+    <string name="warranty_time">Tiempo de garantía</string>
+    <string name="days">Días</string>
+    <string name="factory_warranty">Garantía de fábrica</string>
+    <string name="no_warranty">Sin Garantía</string>
+    <string name="warranty_prompt">Dias</string>
+    <string-array name="warranty_arrays">
+        <item>Dias</item>
+    </string-array>
+    <string name="data_sheet">Ficha técnica del producto</string>
+    <string name="data_sheet_value">Tener una ficha técnica completa te permitiráposicionar mejor y obtener mayor número de aliados</string>
+    <string name="screen_size">Tamaño de la pantalla:</string>
+    <string name="example_card">Ficha de ejemplo:</string>
+    <string name="sample_response">Respuesta de ejemplo</string>
     <!--  My Account  -->
 </resources>
