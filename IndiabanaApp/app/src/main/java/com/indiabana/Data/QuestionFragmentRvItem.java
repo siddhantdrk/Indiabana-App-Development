@@ -1,11 +1,11 @@
 package com.indiabana.Data;
 
-public class QuestionRvItem {
+public class QuestionFragmentRvItem {
     public String productName;
     public String productDetail;
     public int rightArrowBtn;
 
-    public QuestionRvItem(String productName, String productDetail, int rightArrowBtn) {
+    public QuestionFragmentRvItem(String productName, String productDetail, int rightArrowBtn) {
         this.productName = productName;
         this.productDetail = productDetail;
         this.rightArrowBtn = rightArrowBtn;

@@ -10,7 +10,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.indiabana.Adapters.questions.QuestionSellingRvAdapter;
-import com.indiabana.Data.QuestionRvItem;
+import com.indiabana.Data.QuestionFragmentRvItem;
 import com.indiabana.R;
 
 import java.util.ArrayList;
@@ -19,7 +19,7 @@ public class SellingFragment extends Fragment {
 
     private RecyclerView sellingRecyclerView;
     private QuestionSellingRvAdapter questionSellingRvAdapter;
-    private ArrayList<QuestionRvItem> questionRvItemArrayList;
+    private ArrayList<QuestionFragmentRvItem> questionFragmentRvItemArrayList;
     private View view;
     public SellingFragment() {
         // Required empty public constructor
@@ -37,14 +37,14 @@ public class SellingFragment extends Fragment {
 
     private void setUpPreview() {
         sellingRecyclerView = view.findViewById(R.id.selling_recyclerView);
-        questionRvItemArrayList = new ArrayList<>();
+        questionFragmentRvItemArrayList = new ArrayList<>();
 
-        QuestionRvItem questionRvItem = new QuestionRvItem("Samsung Glaxy", "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore?", R.drawable.ic_mdi_keyboard_arrow_right_black);
+        QuestionFragmentRvItem questionFragmentRvItem = new QuestionFragmentRvItem("Samsung Glaxy", "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore?", R.drawable.ic_mdi_keyboard_arrow_right_black);
         for (int i = 0; i < 2; i++)
-            questionRvItemArrayList.add(questionRvItem);
+            questionFragmentRvItemArrayList.add(questionFragmentRvItem);
         LinearLayoutManager layoutManager = new LinearLayoutManager(view.getContext());
         sellingRecyclerView.setLayoutManager(layoutManager);
-        questionSellingRvAdapter = new QuestionSellingRvAdapter(questionRvItemArrayList);
+        questionSellingRvAdapter = new QuestionSellingRvAdapter(questionFragmentRvItemArrayList);
         sellingRecyclerView.setAdapter(questionSellingRvAdapter);
     }
 }

@@ -9,30 +9,30 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.indiabana.Data.QuestionRvItem;
+import com.indiabana.Data.QuestionFragmentRvItem;
 import com.indiabana.R;
 
 import java.util.ArrayList;
 
-public class QuestionBuyingRvAdapter extends RecyclerView.Adapter<QuestionBuyingRvAdapter.ViewHolder>{
-    public ArrayList<QuestionRvItem> questionRvItemArrayList;
+public class QuestionBuyingRvAdapter extends RecyclerView.Adapter<QuestionBuyingRvAdapter.ViewHolder> {
+    public ArrayList<QuestionFragmentRvItem> questionFragmentRvItemArrayList;
 
-    public QuestionBuyingRvAdapter(ArrayList<QuestionRvItem> questionRvItemArrayList) {
-        this.questionRvItemArrayList = questionRvItemArrayList;
+    public QuestionBuyingRvAdapter(ArrayList<QuestionFragmentRvItem> questionFragmentRvItemArrayList) {
+        this.questionFragmentRvItemArrayList = questionFragmentRvItemArrayList;
     }
 
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.question_fragment_rv_item,parent,false);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.question_fragment_rv_item, parent, false);
         return new ViewHolder(view);
     }
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-        int image = questionRvItemArrayList.get(position).getRightArrowBtn();
-        String productName = questionRvItemArrayList.get(position).getProductName();
-        String productDetail = questionRvItemArrayList.get(position).getProductDetail();
+        int image = questionFragmentRvItemArrayList.get(position).getRightArrowBtn();
+        String productName = questionFragmentRvItemArrayList.get(position).getProductName();
+        String productDetail = questionFragmentRvItemArrayList.get(position).getProductDetail();
 
         holder.setProductImage(image);
         holder.setProductName(productName);
@@ -41,13 +41,14 @@ public class QuestionBuyingRvAdapter extends RecyclerView.Adapter<QuestionBuying
 
     @Override
     public int getItemCount() {
-        return questionRvItemArrayList.size();
+        return questionFragmentRvItemArrayList.size();
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
-        private TextView productName;
-        private TextView productDetail;
-        private ImageView productImage;
+        private final TextView productName;
+        private final TextView productDetail;
+        private final ImageView productImage;
+
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
 
@@ -55,7 +56,8 @@ public class QuestionBuyingRvAdapter extends RecyclerView.Adapter<QuestionBuying
             productDetail = itemView.findViewById(R.id.product_details);
             productImage = itemView.findViewById(R.id.btn);
         }
-        public void setProductImage(int image){
+
+        public void setProductImage(int image) {
             productImage.setImageResource(image);
         }
         public void setProductName(String name){

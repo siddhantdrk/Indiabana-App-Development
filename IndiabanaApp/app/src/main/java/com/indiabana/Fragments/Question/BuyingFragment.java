@@ -10,7 +10,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.indiabana.Adapters.questions.QuestionBuyingRvAdapter;
-import com.indiabana.Data.QuestionRvItem;
+import com.indiabana.Data.QuestionFragmentRvItem;
 import com.indiabana.R;
 
 import java.util.ArrayList;
@@ -18,7 +18,7 @@ import java.util.ArrayList;
 public class BuyingFragment extends Fragment {
     private RecyclerView buyingRecyclerView;
     private QuestionBuyingRvAdapter questionBuyingRvAdapter;
-    private ArrayList<QuestionRvItem> questionRvItemArrayList;
+    private ArrayList<QuestionFragmentRvItem> questionFragmentRvItemArrayList;
     private View view;
 
     public BuyingFragment() {
@@ -36,14 +36,14 @@ public class BuyingFragment extends Fragment {
     }
 
     private void setUpRv() {
-        questionRvItemArrayList = new ArrayList<>();
-        QuestionRvItem questionRvItem = new QuestionRvItem("Samsung Glaxy", "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore...", R.drawable.ic_mdi_keyboard_arrow_right_black);
+        questionFragmentRvItemArrayList = new ArrayList<>();
+        QuestionFragmentRvItem questionFragmentRvItem = new QuestionFragmentRvItem("Samsung Glaxy", "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore...", R.drawable.ic_mdi_keyboard_arrow_right_black);
         for (int i = 0; i < 2; i++)
-            questionRvItemArrayList.add(questionRvItem);
+            questionFragmentRvItemArrayList.add(questionFragmentRvItem);
         buyingRecyclerView = view.findViewById(R.id.buying_recyclerView);
         LinearLayoutManager layoutManager = new LinearLayoutManager(view.getContext());
         buyingRecyclerView.setLayoutManager(layoutManager);
-        questionBuyingRvAdapter = new QuestionBuyingRvAdapter(questionRvItemArrayList);
+        questionBuyingRvAdapter = new QuestionBuyingRvAdapter(questionFragmentRvItemArrayList);
         buyingRecyclerView.setAdapter(questionBuyingRvAdapter);
     }
 }
