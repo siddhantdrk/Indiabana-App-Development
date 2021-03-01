@@ -1,5 +1,7 @@
 package com.indiabana.Adapters;
 
+import android.content.Intent;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -8,6 +10,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.indiabana.Activities.ProductActivity;
 import com.indiabana.Data.RecommendedRVItem;
 import com.indiabana.R;
 
@@ -49,6 +52,16 @@ public class HomeScreenRecommendedRVAdapter extends RecyclerView.Adapter<HomeScr
             item_name = itemView.findViewById(R.id.name);
             item_delivery_time = itemView.findViewById(R.id.delivery_time);
             item_price= itemView.findViewById(R.id.price);
+            itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Log.d("pp","pressed");
+                    v.getContext().startActivity(new Intent(v.getContext(), ProductActivity.class));
+//                    AppCompatActivity activity = (AppCompatActivity) v.getContext();
+//                    Fragment myFragment = new ProductFragment();
+//                    activity.getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container_main, myFragment).addToBackStack(null).commit();
+                }
+            });
         }
     }
 
