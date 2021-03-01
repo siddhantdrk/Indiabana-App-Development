@@ -442,6 +442,32 @@
     <string name="describe_product">Describe your product</string>
     <string name="describe_product_remember">Remember that you cannot include contact information and you are responsible for what you post here</string>
     <string name="quantity_available">Quantity Available</string>
-
+    <string name="shipping_method">Shipping method</string>
+    <string name="select_method">Select all the methods you want to use</string>
+    <string name="icarrys">iCarrys</string>
+    <string name="store_pickup">Store Pickup</string>
+    <string name="others">Others</string>
+    <string name="shipping_costs">Shipping costs</string>
+    <string name="behalf_of_seller">On behalf of the seller (you pay)</string>
+    <string name="behalf_of_buyer">On behalf of the buyer</string>
+    <string name="shipping_price_through_others">Shipping price through "Others"</string>
+    <string name="shipping_company">Shipping company</string>
+    <string name="used">Used</string>
+    <string name="reconditioned">Reconditioned</string>
+    <string name="warranty">Warranty</string>
+    <string name="seller_warranty">Seller warranty</string>
+    <string name="warranty_time">Warranty time</string>
+    <string name="days">Days</string>
+    <string name="factory_warranty">Factory warranty</string>
+    <string name="no_warranty">No warranty</string>
+    <string name="warranty_prompt">Dias</string>
+    <string-array name="warranty_arrays">
+        <item>Dias</item>
+    </string-array>
+    <string name="data_sheet">Product data sheet</string>
+    <string name="data_sheet_value">Having a complete technical file will allow you to position better and obtain a greater number of allies</string>
+    <string name="screen_size">Screen size:</string>
+    <string name="example_card">Example card:</string>
+    <string name="sample_response">Sample response</string>
     <!--  My Account  -->
 </resources>

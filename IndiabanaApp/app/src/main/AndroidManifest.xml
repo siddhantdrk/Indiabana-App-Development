@@ -27,6 +27,9 @@
         <activity android:name=".Activities.LoginActivity" />
         <activity android:name=".Activities.AddProduct.AddProductPriceActivity" />
         <activity android:name=".Activities.AddProduct.AddProductAmountActivity" />
+        <activity android:name=".Activities.AddProduct.AddProductShippingActivity" />
+        <activity android:name=".Activities.AddProduct.AddProductConditionActivity" />
+        <activity android:name=".Activities.AddProduct.AddProductDatasheetActivity" />
         <activity android:name=".Activities.ProductActivity"/>
     </application>
 

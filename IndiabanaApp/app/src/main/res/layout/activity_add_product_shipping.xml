@@ -1,0 +1,390 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/dark_azyl"
+    tools:context=".Activities.AddProduct.AddProductShippingActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/activity_to_post_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:layout_alignParentTop="true"
+        android:background="@color/dark_azyl"
+        android:elevation="4dp">
+
+        <ImageView
+            android:id="@+id/to_post_activity_back_arrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_mdi_keyboard_arrow_left_white" />
+
+        <ImageView
+            android:id="@+id/icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_marginEnd="12dp"
+            android:src="@drawable/menu" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:fontFamily="@font/roboto_bold"
+            android:gravity="center"
+            android:text="@string/add_product"
+            android:textColor="@color/white"
+            android:textSize="22sp" />
+    </androidx.appcompat.widget.Toolbar>
+
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/continue_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="32dp"
+        android:backgroundTint="@color/indiabana_orange"
+        android:paddingHorizontal="24dp"
+        android:paddingVertical="16dp"
+        android:text="@string/continue_post"
+        android:textAllCaps="false"
+        android:textSize="18sp"
+        app:cornerRadius="5dp" />
+
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_above="@id/continue_btn"
+        android:layout_below="@id/activity_to_post_toolbar"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="-20dp"
+        app:cardBackgroundColor="@color/activity_bg_color"
+        app:cardCornerRadius="20dp"
+        app:cardElevation="0dp"
+        app:contentPaddingTop="20dp">
+
+        <ScrollView
+            android:id="@+id/frameLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="64dp">
+
+                <ImageView
+                    android:id="@+id/plus"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="16dp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/ic_black_plus"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/layout_shipping_costs" />
+
+                <TextView
+                    android:id="@+id/textView_select_method"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="4dp"
+                    android:fontFamily="@font/roboto"
+                    android:text="@string/select_method"
+                    android:textColor="@color/text2"
+                    android:textSize="14sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView_shipping_method" />
+
+                <TextView
+                    android:id="@+id/textView_shipping_costs"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    android:fontFamily="@font/roboto_bold"
+                    android:text="@string/shipping_costs"
+                    android:textColor="@color/text2"
+                    android:textSize="14sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/layout_shipping_method" />
+
+                <TextView
+                    android:id="@+id/textView_shipping_method"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="12dp"
+                    android:fontFamily="@font/roboto_bold"
+                    android:text="@string/shipping_method"
+                    android:textColor="@color/text2"
+                    android:textSize="14sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/layout_shipping_costs"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:background="@color/white"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView_shipping_costs">
+
+                    <EditText
+                        android:id="@+id/shipping_company"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="16dp"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="16dp"
+                        android:backgroundTint="@color/activity_bg_color"
+                        android:fontFamily="@font/roboto"
+                        android:hint="@string/shipping_company"
+                        android:paddingBottom="16dp"
+                        android:textColor="@color/dateColor"
+                        android:textSize="14sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/shipping_price_through_others_info" />
+
+                    <EditText
+                        android:id="@+id/shipping_price"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="16dp"
+                        android:layout_marginEnd="16dp"
+                        android:layout_marginStart="16dp"
+                        android:backgroundTint="@color/activity_bg_color"
+                        android:fontFamily="@font/roboto"
+                        android:hint="@string/publication_price"
+                        android:paddingBottom="16dp"
+                        android:textColor="@color/dateColor"
+                        android:textSize="14sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/shipping_company" />
+
+                    <ImageView
+                        android:id="@+id/behalf_of_buyer_check"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="16dp"
+                        android:layout_marginTop="16dp"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/ic_mdi_check_circle"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/view_behalf_of_seller" />
+
+                    <ImageView
+                        android:id="@+id/shipping_price_through_others_info"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="16dp"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/ic_mdi_info"
+                        app:layout_constraintStart_toEndOf="@+id/textView_shipping_price_through_others"
+                        app:layout_constraintTop_toBottomOf="@+id/view_behalf_of_buyer" />
+
+                    <TextView
+                        android:id="@+id/textView_behalf_of_buyer"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="16dp"
+                        android:fontFamily="@font/roboto"
+                        android:text="@string/behalf_of_buyer"
+                        android:textColor="@color/text2"
+                        android:textSize="14sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/view_behalf_of_seller" />
+
+                    <TextView
+                        android:id="@+id/textView_behalf_of_seller"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="16dp"
+                        android:fontFamily="@font/roboto"
+                        android:text="@string/behalf_of_seller"
+                        android:textColor="@color/text2"
+                        android:textSize="14sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/textView_shipping_price_through_others"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="16dp"
+                        android:fontFamily="@font/roboto_bold"
+                        android:paddingBottom="12dp"
+                        android:text="@string/shipping_price_through_others"
+                        android:textColor="@color/text2"
+                        android:textSize="12sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/view_behalf_of_buyer" />
+
+                    <View
+                        android:id="@+id/view_behalf_of_seller"
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:layout_marginTop="16dp"
+                        android:alpha="0.5"
+                        android:background="@color/stroke"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/textView_behalf_of_seller" />
+
+                    <View
+                        android:id="@+id/view_behalf_of_buyer"
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:layout_marginTop="16dp"
+                        android:alpha="0.5"
+                        android:background="@color/stroke"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/behalf_of_buyer_check" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/layout_shipping_method"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:background="@color/white"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView_select_method">
+
+                    <ImageView
+                        android:id="@+id/icarry_info"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="16dp"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/ic_mdi_info"
+                        app:layout_constraintStart_toEndOf="@+id/textView_icarry"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <ImageView
+                        android:id="@+id/icarry_check"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="16dp"
+                        android:layout_marginTop="16dp"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/ic_mdi_check_circle"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <ImageView
+                        android:id="@+id/store_pickup_check"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="16dp"
+                        android:layout_marginTop="16dp"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/ic_mdi_check_circle"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/view_icarry" />
+
+                    <ImageView
+                        android:id="@+id/others_check"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="16dp"
+                        android:layout_marginTop="16dp"
+                        android:paddingBottom="16dp"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/ic_mdi_check_circle"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/view_store_pickup" />
+
+                    <TextView
+                        android:id="@+id/textView_icarry"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="16dp"
+                        android:fontFamily="@font/roboto"
+                        android:text="@string/icarrys"
+                        android:textColor="@color/text2"
+                        android:textSize="14sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/textView_others"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="16dp"
+                        android:fontFamily="@font/roboto"
+                        android:paddingBottom="16dp"
+                        android:text="@string/others"
+                        android:textColor="@color/text2"
+                        android:textSize="14sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/view_store_pickup" />
+
+                    <TextView
+                        android:id="@+id/textView_store_pickup"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="16dp"
+                        android:fontFamily="@font/roboto"
+                        android:text="@string/store_pickup"
+                        android:textColor="@color/text2"
+                        android:textSize="14sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/view_icarry" />
+
+                    <View
+                        android:id="@+id/view_icarry"
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:layout_marginTop="16dp"
+                        android:alpha="0.5"
+                        android:background="@color/stroke"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/textView_icarry" />
+
+                    <View
+                        android:id="@+id/view_store_pickup"
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:layout_marginTop="16dp"
+                        android:alpha="0.5"
+                        android:background="@color/stroke"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/textView_store_pickup" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </ScrollView>
+
+    </com.google.android.material.card.MaterialCardView>
+
+
+</RelativeLayout>

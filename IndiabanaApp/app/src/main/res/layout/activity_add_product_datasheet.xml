@@ -1,0 +1,452 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/dark_azyl"
+    tools:context=".Activities.AddProduct.AddProductDatasheetActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/activity_to_post_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:layout_alignParentTop="true"
+        android:background="@color/dark_azyl"
+        android:elevation="4dp">
+
+        <ImageView
+            android:id="@+id/to_post_activity_back_arrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_mdi_keyboard_arrow_left_white" />
+
+        <ImageView
+            android:id="@+id/icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_marginEnd="12dp"
+            android:src="@drawable/menu" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:fontFamily="@font/roboto_bold"
+            android:gravity="center"
+            android:text="@string/add_product"
+            android:textColor="@color/white"
+            android:textSize="22sp" />
+    </androidx.appcompat.widget.Toolbar>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/continue_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="32dp"
+        android:backgroundTint="@color/indiabana_orange"
+        android:paddingHorizontal="24dp"
+        android:paddingVertical="16dp"
+        android:text="@string/continue_post"
+        android:textAllCaps="false"
+        android:textSize="18sp"
+        app:cornerRadius="5dp" />
+
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_above="@id/continue_btn"
+        android:layout_below="@id/activity_to_post_toolbar"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="-20dp"
+        app:cardBackgroundColor="@color/activity_bg_color"
+        app:cardCornerRadius="20dp"
+        app:cardElevation="0dp"
+        app:contentPaddingTop="20dp">
+
+        <RelativeLayout
+            android:id="@+id/header_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ScrollView
+                android:id="@+id/frameLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/datasheet_value"
+                android:layout_marginTop="14dp"
+                android:background="@color/white">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="64dp">
+
+                    <EditText
+                        android:id="@+id/brand"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="16dp"
+                        android:layout_marginStart="12dp"
+                        android:drawableEnd="@drawable/ic_mdi_edit"
+                        android:fontFamily="@font/roboto_regular"
+                        android:hint="SAMSUNG"
+                        android:textColorHint="@color/text2"
+                        android:textSize="14sp"
+                        app:layout_constraintBottom_toTopOf="@+id/view_brand"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/textview_brand" />
+
+                    <EditText
+                        android:id="@+id/model"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="16dp"
+                        android:layout_marginStart="12dp"
+                        android:drawableEnd="@drawable/ic_mdi_edit"
+                        android:fontFamily="@font/roboto_regular"
+                        android:hint="Silver Platinum LA12"
+                        android:textColorHint="@color/text2"
+                        android:textSize="14sp"
+                        app:layout_constraintBottom_toTopOf="@+id/view_model"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/textview_model" />
+
+                    <EditText
+                        android:id="@+id/code"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="16dp"
+                        android:layout_marginStart="12dp"
+                        android:drawableEnd="@drawable/ic_mdi_edit"
+                        android:fontFamily="@font/roboto_regular"
+                        android:hint="Silver Platinum LA12"
+                        android:textColorHint="@color/text2"
+                        android:textSize="14sp"
+                        app:layout_constraintBottom_toTopOf="@+id/view_code"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/textview_code" />
+
+                    <EditText
+                        android:id="@+id/screen_size"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="16dp"
+                        android:layout_marginStart="12dp"
+                        android:drawableEnd="@drawable/ic_mdi_edit"
+                        android:fontFamily="@font/roboto_regular"
+                        android:hint="42”"
+                        android:textColorHint="@color/text2"
+                        android:textSize="14sp"
+                        app:layout_constraintBottom_toTopOf="@+id/view_screen_size"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/textview_screen_size" />
+
+                    <EditText
+                        android:id="@+id/example_card1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="16dp"
+                        android:layout_marginStart="12dp"
+                        android:drawableEnd="@drawable/ic_mdi_edit"
+                        android:fontFamily="@font/roboto_regular"
+                        android:hint="@string/sample_response"
+                        android:textColorHint="@color/text2"
+                        android:textSize="14sp"
+                        app:layout_constraintBottom_toTopOf="@+id/view_example_card1"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/textview_example_card1" />
+
+                    <EditText
+                        android:id="@+id/example_card2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="16dp"
+                        android:layout_marginStart="12dp"
+                        android:drawableEnd="@drawable/ic_mdi_edit"
+                        android:fontFamily="@font/roboto_regular"
+                        android:paddingBottom="12dp"
+                        android:hint="@string/sample_response"
+                        android:textColorHint="@color/text2"
+                        android:textSize="14sp"
+                        app:layout_constraintBottom_toTopOf="@+id/view_example_card2"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/textview_example_card2" />
+
+                    <EditText
+                        android:id="@+id/example_card3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="16dp"
+                        android:layout_marginStart="12dp"
+                        android:drawableEnd="@drawable/ic_mdi_edit"
+                        android:fontFamily="@font/roboto_regular"
+                        android:paddingBottom="12dp"
+                        android:hint="@string/sample_response"
+                        android:textColorHint="@color/text2"
+                        android:textSize="14sp"
+                        app:layout_constraintBottom_toTopOf="@+id/view_example_card3"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/textview_example_card3" />
+
+                    <EditText
+                        android:id="@+id/example_card4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="16dp"
+                        android:layout_marginStart="12dp"
+                        android:drawableEnd="@drawable/ic_mdi_edit"
+                        android:fontFamily="@font/roboto_regular"
+                        android:paddingBottom="12dp"
+                        android:hint="@string/sample_response"
+                        android:textColorHint="@color/text2"
+                        android:textSize="14sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/textview_example_card4" />
+
+                    <ImageView
+                        android:id="@+id/code_info"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="16dp"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/ic_mdi_info"
+                        app:layout_constraintBottom_toTopOf="@+id/code"
+                        app:layout_constraintStart_toEndOf="@+id/textview_code"
+                        app:layout_constraintTop_toBottomOf="@+id/view_model" />
+
+                    <TextView
+                        android:id="@+id/textview_brand"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="16dp"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="16dp"
+                        android:fontFamily="@font/roboto_bold"
+                        android:text="@string/brand"
+                        android:textColor="@color/black"
+                        android:textSize="12sp"
+                        app:layout_constraintBottom_toTopOf="@+id/brand"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/textview_model"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="16dp"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="16dp"
+                        android:fontFamily="@font/roboto_bold"
+                        android:text="@string/model"
+                        android:textColor="@color/black"
+                        android:textSize="12sp"
+                        app:layout_constraintBottom_toTopOf="@+id/model"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/view_brand" />
+
+                    <TextView
+                        android:id="@+id/textview_code"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="16dp"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="16dp"
+                        android:fontFamily="@font/roboto_bold"
+                        android:text="@string/code"
+                        android:textColor="@color/black"
+                        android:textSize="12sp"
+                        app:layout_constraintBottom_toTopOf="@+id/code"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/view_model" />
+
+                    <TextView
+                        android:id="@+id/textview_screen_size"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="16dp"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="16dp"
+                        android:fontFamily="@font/roboto_bold"
+                        android:text="@string/screen_size"
+                        android:textColor="@color/black"
+                        android:textSize="12sp"
+                        app:layout_constraintBottom_toTopOf="@+id/screen_size"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/view_code" />
+
+                    <TextView
+                        android:id="@+id/textview_example_card1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="16dp"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="16dp"
+                        android:fontFamily="@font/roboto_bold"
+                        android:text="@string/example_card"
+                        android:textColor="@color/black"
+                        android:textSize="12sp"
+                        app:layout_constraintBottom_toTopOf="@+id/example_card1"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/view_screen_size" />
+
+                    <TextView
+                        android:id="@+id/textview_example_card2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="16dp"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="16dp"
+                        android:fontFamily="@font/roboto_bold"
+                        android:text="@string/example_card"
+                        android:textColor="@color/black"
+                        android:textSize="12sp"
+                        app:layout_constraintBottom_toTopOf="@+id/example_card2"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/view_example_card1" />
+
+                    <TextView
+                        android:id="@+id/textview_example_card3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="16dp"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="16dp"
+                        android:fontFamily="@font/roboto_bold"
+                        android:text="@string/example_card"
+                        android:textColor="@color/black"
+                        android:textSize="12sp"
+                        app:layout_constraintBottom_toTopOf="@+id/example_card3"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/view_example_card2" />
+
+                    <TextView
+                        android:id="@+id/textview_example_card4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="16dp"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="16dp"
+                        android:fontFamily="@font/roboto_bold"
+                        android:text="@string/example_card"
+                        android:textColor="@color/black"
+                        android:textSize="12sp"
+                        app:layout_constraintBottom_toTopOf="@+id/example_card4"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/view_example_card3" />
+
+                    <View
+                        android:id="@+id/view_brand"
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:layout_marginTop="8dp"
+                        android:background="@color/stroke"
+                        app:layout_constraintBottom_toTopOf="@+id/textview_model"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/brand" />
+
+                    <View
+                        android:id="@+id/view_model"
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:layout_marginTop="8dp"
+                        android:background="@color/stroke"
+                        app:layout_constraintBottom_toTopOf="@+id/textview_code"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/model" />
+
+                    <View
+                        android:id="@+id/view_code"
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:layout_marginTop="8dp"
+                        android:background="@color/stroke"
+                        app:layout_constraintBottom_toTopOf="@+id/textview_screen_size"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/code" />
+
+                    <View
+                        android:id="@+id/view_screen_size"
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:layout_marginTop="8dp"
+                        android:background="@color/stroke"
+                        app:layout_constraintBottom_toTopOf="@+id/textview_example_card1"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/screen_size" />
+
+                    <View
+                        android:id="@+id/view_example_card1"
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:layout_marginTop="8dp"
+                        android:background="@color/stroke"
+                        app:layout_constraintBottom_toTopOf="@+id/textview_example_card2"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/example_card1" />
+
+                    <View
+                        android:id="@+id/view_example_card2"
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:layout_marginTop="8dp"
+                        android:background="@color/stroke"
+                        app:layout_constraintBottom_toTopOf="@+id/textview_example_card3"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/example_card2" />
+
+                    <View
+                        android:id="@+id/view_example_card3"
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:layout_marginTop="8dp"
+                        android:background="@color/stroke"
+                        app:layout_constraintBottom_toTopOf="@+id/textview_example_card4"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/example_card3" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </ScrollView>
+
+            <TextView
+                android:id="@+id/datasheet_value"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textview_datasheet"
+                android:layout_marginEnd="16dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="6dp"
+                android:fontFamily="@font/roboto_regular"
+                android:text="@string/data_sheet_value"
+                android:textColor="@color/text2"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/textview_datasheet"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="14dp"
+                android:fontFamily="@font/roboto_bold"
+                android:text="@string/data_sheet"
+                android:textColor="@color/text2"
+                android:textSize="12sp" />
+        </RelativeLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+
+</RelativeLayout>

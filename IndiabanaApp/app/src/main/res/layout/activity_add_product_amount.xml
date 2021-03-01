@@ -163,6 +163,7 @@
                             android:hint="Ej. 100"
                             android:padding="10dp"
                             android:textColor="@color/dateColor"
+                            android:inputType="number"
                             android:textSize="14sp" />
 
                         <TextView
