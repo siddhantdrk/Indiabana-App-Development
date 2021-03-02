@@ -251,4 +251,22 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
     }
 
+    public void showFullScreenFragmentLayout() {
+        findViewById(R.id.fragment_full_container_main).setVisibility(View.VISIBLE);
+        findViewById(R.id.rl_bottom_button).setVisibility(View.VISIBLE);
+
+        findViewById(R.id.fragment_container_main).setVisibility(View.GONE);
+        findViewById(R.id.bottom_nav_main).setVisibility(View.GONE);
+        findViewById(R.id.toolbar).setVisibility(View.GONE);
+    }
+
+
+    public void hideFullScreenFragmentLayout() {
+        findViewById(R.id.fragment_full_container_main).setVisibility(View.GONE);
+        findViewById(R.id.rl_bottom_button).setVisibility(View.GONE);
+
+        findViewById(R.id.fragment_container_main).setVisibility(View.VISIBLE);
+        findViewById(R.id.bottom_nav_main).setVisibility(View.VISIBLE);
+        findViewById(R.id.toolbar).setVisibility(View.VISIBLE);
+    }
 }

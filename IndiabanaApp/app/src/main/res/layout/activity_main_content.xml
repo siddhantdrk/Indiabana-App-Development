@@ -100,6 +100,20 @@
     </androidx.appcompat.widget.Toolbar>
 
     <com.google.android.material.card.MaterialCardView
+        android:id="@+id/fragment_full_container_main"
+        android:layout_width="match_parent"
+        android:layout_above="@+id/rl_bottom_button"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:layout_marginTop="-20dp"
+        app:cardCornerRadius="20dp"
+        android:visibility="gone"
+        app:cardElevation="0dp"
+        app:contentPaddingTop="20dp">
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.card.MaterialCardView
         android:id="@+id/fragment_container_main"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -111,6 +125,28 @@
         app:contentPaddingTop="20dp">
 
     </com.google.android.material.card.MaterialCardView>
+
+    <RelativeLayout
+        android:id="@+id/rl_bottom_button"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/dark_azyl">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/RABuyer_sendQues_btn"
+            style="@style/OrangeBtnStyleBold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_alignParentRight="true"
+            android:text="@string/continue_post"
+            android:textSize="18sp"
+            app:cornerRadius="5dp" />
+    </RelativeLayout>
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottom_nav_main"
