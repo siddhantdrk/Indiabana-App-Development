@@ -2,6 +2,7 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:background="@color/activity_bg_color"
     android:layout_height="match_parent"
     tools:context=".Fragments.MyShopping.RatePurchaseFragment">
 
@@ -40,6 +41,7 @@
                     android:layout_width="wrap_content"
                     android:button="@drawable/custom_radion_button"
                     android:padding="10dp"
+                    android:fontFamily="@font/roboto"
                     android:layout_height="wrap_content"
                     android:text="@string/i_have_the_package_and_it_s_fine"/>
 
@@ -47,6 +49,7 @@
                     android:id="@+id/rb_problem_with_package"
                     android:layout_width="wrap_content"
                     android:button="@drawable/custom_radion_button"
+                    android:fontFamily="@font/roboto"
                     android:padding="10dp"
                     android:layout_height="wrap_content"
                     android:text="@string/i_have_the_package_but_there_is_a_problem"/>
@@ -55,6 +58,7 @@
                     android:layout_width="wrap_content"
                     android:button="@drawable/custom_radion_button"
                     android:padding="10dp"
+                    android:fontFamily="@font/roboto"
                     android:clickable="false"
                     android:focusable="false"
                     android:layout_height="wrap_content"
