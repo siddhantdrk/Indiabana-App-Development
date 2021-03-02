@@ -474,4 +474,20 @@ que pueda ser identificada</string>
     <string name="example_card">Ficha de ejemplo:</string>
     <string name="sample_response">Respuesta de ejemplo</string>
     <!--  My Account  -->
+
+    <!-- rate purchase -->
+    <string name="rate_purchase">Calificar compra</string>
+    <string name="tell_us_how_your_purchase_went">Cuéntanos cómo te fue con tu compra </string>
+    <string name="i_have_the_package_and_it_s_fine">Tengo el paquete y está bien</string>
+    <string name="i_have_the_package_but_there_is_a_problem">Tengo el paquete, pero hay problema </string>
+    <string name="i_don_t_have_the_package">No tengo el paquete </string>
+    <string name="rate_the_seller">Califica al vendedor </string>
+    <string name="leave_your_comments_on_the_seller_s_attention">Deja tus comentarios sobre la atención del vendedor</string>
+    <string name="tell_the_world_your_opinion_about">Tell the world your opinion about</string>
+    <string name="leave_your_comments_about_the_product_and_share_photos">Leave your comments about the product and share photos</string>
+    <string name="describe_the_problem">Describe el problema</string>
+    <string name="the_product_does_not_match_the_published">El producto no coincide con el publicado</string>
+    <string name="the_product_is_defective">El producto está defectuoso </string>
+    <string name="write_here_the_problem_with_your_purchase">Escriba aquí el problema con su compra</string>
+
 </resources>

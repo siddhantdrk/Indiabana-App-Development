@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Fragments.MyShopping.RatePurchaseFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/rate_purchase_txtView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="8dp"
+            android:fontFamily="@font/roboto_bold"
+            android:text="@string/tell_us_how_your_purchase_went"
+            android:textColor="@color/black"
+            android:textSize="14sp" />
+
+        <RelativeLayout
+            android:id="@+id/order_detail_orderNumber_relativeLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white">
+
+            <RadioGroup
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginBottom="8dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RadioButton
+                    android:id="@+id/rb_package_fine"
+                    android:layout_width="wrap_content"
+                    android:button="@drawable/custom_radion_button"
+                    android:padding="10dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/i_have_the_package_and_it_s_fine"/>
+
+                <RadioButton
+                    android:id="@+id/rb_problem_with_package"
+                    android:layout_width="wrap_content"
+                    android:button="@drawable/custom_radion_button"
+                    android:padding="10dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/i_have_the_package_but_there_is_a_problem"/>
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:button="@drawable/custom_radion_button"
+                    android:padding="10dp"
+                    android:clickable="false"
+                    android:focusable="false"
+                    android:layout_height="wrap_content"
+                    android:text="@string/i_don_t_have_the_package"/>
+
+            </RadioGroup>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+</ScrollView>

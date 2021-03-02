@@ -12,6 +12,8 @@ import android.widget.ImageView;
 import android.widget.PopupMenu;
 import android.widget.TextView;
 
+import com.indiabana.Activities.MainActivity;
+import com.indiabana.Fragments.PromoteDetailsFragment;
 import com.indiabana.R;
 
 /**
@@ -67,7 +69,7 @@ public class PurchaseDetailsFragment extends Fragment implements View.OnClickLis
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_purchase_details, container, false);
 
-        ImageView menuIcon  = getActivity().findViewById(R.id.icon);
+        ImageView menuIcon = getActivity().findViewById(R.id.icon);
         menuIcon.setImageResource(R.drawable.menu);
         menuIcon.setVisibility(View.VISIBLE);
         menuIcon.setOnClickListener(this);
@@ -75,17 +77,23 @@ public class PurchaseDetailsFragment extends Fragment implements View.OnClickLis
         TextView textView = getActivity().findViewById(R.id.text);
         textView.setText(R.string.purchase_details);
 
+        view.findViewById(R.id.order_detail_IHavePackage).setOnClickListener(this);
+
         return view;
     }
 
     @Override
     public void onClick(View view) {
-        switch (view.getId()){
+        switch (view.getId()) {
             case R.id.icon:
                 PopupMenu popupMenu = new PopupMenu(getActivity(), view);
                 popupMenu.setOnMenuItemClickListener(this);
                 popupMenu.inflate(R.menu.item_menu);
                 popupMenu.show();
+                break;
+
+            case R.id.order_detail_IHavePackage:
+                ((MainActivity) getActivity()).getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container_main, new RatePurchaseFragment()).commit();
                 break;
         }
     }
