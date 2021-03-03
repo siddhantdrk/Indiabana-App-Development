@@ -15,6 +15,7 @@ import android.widget.TextView;
 
 import com.indiabana.Activities.MainActivity;
 import com.indiabana.R;
+import com.indiabana.Utility.Util;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -69,7 +70,8 @@ public class RatePurchaseFragment extends Fragment {
             @Override
             public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
                 if (b) {
-                    ((MainActivity) getActivity()).getSupportFragmentManager().beginTransaction().replace(R.id.fragment_full_container_main, new RateOrderFragment()).commit();
+                    Util.replaceFragment(new RateOrderFragment(), (MainActivity) getActivity(), R.id.fragment_full_container_main);
+//((MainActivity) getActivity()).getSupportFragmentManager().beginTransaction().replace(R.id.fragment_full_container_main, new RateOrderFragment()).addToBackStack(RateOrderFragment.class.getSimpleName()).commit();
                     /* getActivity().startActivity(new Intent(getContext(), RateOrderActivity.class));*/
                     ((RadioButton) view.findViewById(R.id.rb_package_fine)).setChecked(false);
                     ((MainActivity) getActivity()).showFullScreenFragmentLayout();
@@ -81,7 +83,8 @@ public class RatePurchaseFragment extends Fragment {
             @Override
             public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
                 if (b) {
-                    ((MainActivity) getActivity()).getSupportFragmentManager().beginTransaction().replace(R.id.fragment_full_container_main, new BuyerOrderProblemFragment()).commit();
+                    Util.replaceFragment(new BuyerOrderProblemFragment(), (MainActivity) getActivity(), R.id.fragment_full_container_main);
+                    //((MainActivity) getActivity()).getSupportFragmentManager().beginTransaction().replace(R.id.fragment_full_container_main, new BuyerOrderProblemFragment()).addToBackStack(BuyerOrderProblemFragment.class.getSimpleName()).commit();
                     ((RadioButton) view.findViewById(R.id.rb_problem_with_package)).setChecked(false);
                     ((MainActivity) getActivity()).showFullScreenFragmentLayout();
                 }

@@ -15,6 +15,7 @@ import android.widget.TextView;
 import com.indiabana.Activities.MainActivity;
 import com.indiabana.Fragments.PromoteDetailsFragment;
 import com.indiabana.R;
+import com.indiabana.Utility.Util;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -93,7 +94,8 @@ public class PurchaseDetailsFragment extends Fragment implements View.OnClickLis
                 break;
 
             case R.id.order_detail_IHavePackage:
-                ((MainActivity) getActivity()).getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container_main, new RatePurchaseFragment()).commit();
+                Util.replaceFragment(new RatePurchaseFragment(), (MainActivity) getActivity(), R.id.fragment_container_main);
+//((MainActivity) getActivity()).getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container_main, new RatePurchaseFragment()).addToBackStack(RatePurchaseFragment.class.getSimpleName()).commit();
                 break;
         }
     }

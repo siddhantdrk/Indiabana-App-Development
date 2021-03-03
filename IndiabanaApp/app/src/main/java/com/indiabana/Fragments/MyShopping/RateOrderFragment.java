@@ -15,6 +15,7 @@ import android.widget.RadioButton;
 
 import com.indiabana.Activities.MainActivity;
 import com.indiabana.R;
+import com.indiabana.Utility.Util;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -87,13 +88,14 @@ public class RateOrderFragment extends Fragment implements PopupMenu.OnMenuItemC
         });
 
         ((RadioButton) viewroot.findViewById(R.id.rb_problem_with_package)).setOnCheckedChangeListener((compoundButton, b) -> {
-            if (b) {
+            /*if (b) {
                 ((RadioButton) viewroot.findViewById(R.id.rb_problem_with_package)).setChecked(false);
                 ((RadioButton) viewroot.findViewById(R.id.rb_package_fine)).setChecked(true);
-                ((MainActivity) getActivity()).getSupportFragmentManager().beginTransaction().replace(R.id.fragment_full_container_main, new BuyerOrderProblemFragment()).commit();
+                Util.replaceFragment(new BuyerOrderProblemFragment(), (MainActivity) getActivity(), R.id.fragment_full_container_main);
+                //((MainActivity) getActivity()).getSupportFragmentManager().beginTransaction().replace(R.id.fragment_full_container_main, new BuyerOrderProblemFragment()).addToBackStack(BuyerOrderProblemFragment.class.getSimpleName()).commit();
                 ((RadioButton) viewroot.findViewById(R.id.rb_problem_with_package)).setChecked(false);
                 ((MainActivity) getActivity()).showFullScreenFragmentLayout();
-            }
+            }*/
         });
     }
 

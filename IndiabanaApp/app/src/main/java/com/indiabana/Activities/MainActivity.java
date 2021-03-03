@@ -24,14 +24,17 @@ import com.indiabana.Fragments.HelpFragment;
 import com.indiabana.Fragments.HomeFragment;
 import com.indiabana.Fragments.MyAccountFragment;
 import com.indiabana.Fragments.MySales.MySalesFragment;
+import com.indiabana.Fragments.MyShopping.BuyerOrderProblemFragment;
 import com.indiabana.Fragments.MyShopping.MyShoppingFragment;
 import com.indiabana.Fragments.MyShopping.RateDeliveryBuyerFragment;
 import com.indiabana.Fragments.MyShopping.RateOrderFragment;
+import com.indiabana.Fragments.MyShopping.RatePurchaseFragment;
 import com.indiabana.Fragments.NotificationFragment;
 import com.indiabana.Fragments.PromoteFragment;
 import com.indiabana.Fragments.Question.QuestionFragment;
 import com.indiabana.Fragments.SettingsFragment;
 import com.indiabana.R;
+import com.indiabana.Utility.Util;
 import com.reim.android.filterrecyclerview.FilterRecyclerView;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
@@ -236,7 +239,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 home = false;
                 findViewById(R.id.tv_cancel).setVisibility(View.GONE);
                 if (getSupportFragmentManager().getFragments().get(getSupportFragmentManager().getFragments().size() - 1) instanceof RateOrderFragment) {
-                    getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container_main, new RateDeliveryBuyerFragment()).commit();
+                    Util.replaceFragment(new RateDeliveryBuyerFragment(), (MainActivity.this), R.id.fragment_container_main);
+                    //getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container_main, new RateDeliveryBuyerFragment()).addToBackStack(RateDeliveryBuyerFragment.class.getSimpleName()).commit();
                     hideFullScreenFragmentLayout();
                 }
                 break;
@@ -258,6 +262,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         } else if (findViewById(R.id.search_text_card).getVisibility() == View.VISIBLE) {
             findViewById(R.id.search_text_card).setVisibility(View.GONE);
         } else if (getSupportFragmentManager().getBackStackEntryCount() > 0) {
+            hideFullScreenFragmentLayout();
             getSupportFragmentManager().popBackStack();
         } else if (home) {
             super.onBackPressed();

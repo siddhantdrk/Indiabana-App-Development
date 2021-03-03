@@ -11,7 +11,9 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.DialogFragment;
 
+import com.indiabana.Activities.MainActivity;
 import com.indiabana.R;
+import com.indiabana.Utility.Util;
 
 public class ReviewPostedDialog extends DialogFragment {
 
@@ -59,12 +61,13 @@ public class ReviewPostedDialog extends DialogFragment {
         viewRoot.findViewById(R.id.no_thanks).setOnClickListener(view -> {
             mDialog.hide();
             getActivity().onBackPressed();
+            getActivity().onBackPressed();
+            getActivity().onBackPressed();
         });
 
         viewRoot.findViewById(R.id.yes_tip).setOnClickListener(view -> {
             mDialog.hide();
-            getActivity().getSupportFragmentManager().beginTransaction()
-                    .replace(R.id.fragment_container_main, new AddTipFragment()).commit();
+            Util.replaceFragment(new AddTipFragment(), (MainActivity) getActivity(), R.id.fragment_container_main);
 
         });
 

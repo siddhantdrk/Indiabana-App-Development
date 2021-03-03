@@ -63,6 +63,8 @@
                         android:button="@drawable/custom_radion_button"
                         android:fontFamily="@font/roboto"
                         android:padding="10dp"
+                        android:clickable="false"
+                        android:focusable="false"
                         android:layout_height="wrap_content"
                         android:text="@string/i_have_the_package_but_there_is_a_problem"/>
 
