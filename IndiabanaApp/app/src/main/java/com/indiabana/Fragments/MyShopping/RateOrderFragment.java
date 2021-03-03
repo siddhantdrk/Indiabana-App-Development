@@ -90,7 +90,7 @@ public class RateOrderFragment extends Fragment implements PopupMenu.OnMenuItemC
             if (b) {
                 ((RadioButton) viewroot.findViewById(R.id.rb_problem_with_package)).setChecked(false);
                 ((RadioButton) viewroot.findViewById(R.id.rb_package_fine)).setChecked(true);
-                ((MainActivity) getActivity()).getSupportFragmentManager().beginTransaction().replace(R.id.fragment_full_container_main, new BuyerOrderProblemFragment()).addToBackStack(BuyerOrderProblemFragment.class.getSimpleName()).commit();
+                ((MainActivity) getActivity()).getSupportFragmentManager().beginTransaction().replace(R.id.fragment_full_container_main, new BuyerOrderProblemFragment()).commit();
                 ((RadioButton) viewroot.findViewById(R.id.rb_problem_with_package)).setChecked(false);
                 ((MainActivity) getActivity()).showFullScreenFragmentLayout();
             }

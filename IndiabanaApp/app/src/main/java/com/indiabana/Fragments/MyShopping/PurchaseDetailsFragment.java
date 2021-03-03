@@ -93,7 +93,7 @@ public class PurchaseDetailsFragment extends Fragment implements View.OnClickLis
                 break;
 
             case R.id.order_detail_IHavePackage:
-                ((MainActivity) getActivity()).getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container_main, new RatePurchaseFragment()).addToBackStack(RatePurchaseFragment.class.getSimpleName()).commit();
+                ((MainActivity) getActivity()).getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container_main, new RatePurchaseFragment()).commit();
                 break;
         }
     }

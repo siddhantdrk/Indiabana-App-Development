@@ -489,5 +489,12 @@ que pueda ser identificada</string>
     <string name="the_product_does_not_match_the_published">El producto no coincide con el publicado</string>
     <string name="the_product_is_defective">El producto está defectuoso </string>
     <string name="write_here_the_problem_with_your_purchase">Escriba aquí el problema con su compra</string>
+    <string name="excellent_your_opinion_has_been_published">¡Excelente! Su opinión ha sido publicada.</string>
+    <string name="do_you_want_to_add_a_tip">¿Deseas añadir una propina?</string>
+    <string name="no_thanks">No, gracias</string>
+    <string name="yes_tip">Sí, dar propina</string>
+    <string name="leave_your_tip_for">Leave your tip for</string>
+    <string name="tipping">Tipping</string>
+    <string name="cancel">Cancelar</string>
 
 </resources>

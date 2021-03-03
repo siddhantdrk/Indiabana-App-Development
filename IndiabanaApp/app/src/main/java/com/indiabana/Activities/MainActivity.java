@@ -25,6 +25,8 @@ import com.indiabana.Fragments.HomeFragment;
 import com.indiabana.Fragments.MyAccountFragment;
 import com.indiabana.Fragments.MySales.MySalesFragment;
 import com.indiabana.Fragments.MyShopping.MyShoppingFragment;
+import com.indiabana.Fragments.MyShopping.RateDeliveryBuyerFragment;
+import com.indiabana.Fragments.MyShopping.RateOrderFragment;
 import com.indiabana.Fragments.NotificationFragment;
 import com.indiabana.Fragments.PromoteFragment;
 import com.indiabana.Fragments.Question.QuestionFragment;
@@ -50,12 +52,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         initViews();
+        findViewById(R.id.tv_cancel).setVisibility(View.GONE);
         getSupportFragmentManager().beginTransaction().add(R.id.fragment_container_main, new HomeFragment()).commit();
         bottomNavigationView.setOnNavigationItemSelectedListener(item -> {
             Fragment fragment = null;
             switch (item.getItemId()) {
                 case R.id.bottom_nav_home:
                     home = true;
+                    findViewById(R.id.tv_cancel).setVisibility(View.GONE);
                     fragment = new HomeFragment();
                     getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container_main, fragment).commit();
                     break;
@@ -64,15 +68,18 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     home = false;
                     fragment = new NotificationFragment();
                     secondaryIcon.setImageResource(R.drawable.ic_sort);
+                    findViewById(R.id.tv_cancel).setVisibility(View.GONE);
                     getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container_main, fragment).commit();
                     break;
                 case R.id.bottom_nav_like:
                     home = false;
                     fragment = new FavouritesFragment();
+                    findViewById(R.id.tv_cancel).setVisibility(View.GONE);
                     getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container_main, fragment).commit();
                     break;
                 case R.id.bottom_nav_cart:
                     home = false;
+                    findViewById(R.id.tv_cancel).setVisibility(View.GONE);
                     Intent intent = new Intent(MainActivity.this, CartActivity.class);
                     startActivityForResult(intent, RESULT_CODE);
                     break;
@@ -126,6 +133,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         rate_btn.setOnClickListener(this);
         bottomNavigationView = findViewById(R.id.bottom_nav_main);
         toolbar = findViewById(R.id.toolbar);
+
+        findViewById(R.id.main_continue_button).setOnClickListener(this);
     }
 
 
@@ -136,6 +145,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 home = true;
                 toolbarText.setText("INDIABANA");
                 secondaryIcon.setVisibility(View.VISIBLE);
+                findViewById(R.id.tv_cancel).setVisibility(View.GONE);
                 secondaryIcon.setImageResource(R.drawable.ic_mdi_search);
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container_main, new HomeFragment()).commit();
                 break;
@@ -143,28 +153,34 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 home = false;
                 toolbarText.setText(getString(R.string.questions));
                 secondaryIcon.setVisibility(View.VISIBLE);
+                findViewById(R.id.tv_cancel).setVisibility(View.GONE);
                 secondaryIcon.setImageResource(R.drawable.ic_mdi_search);
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container_main, new QuestionFragment()).commit();
                 break;
             case R.id.my_shopping_btn:
                 home = false;
+                findViewById(R.id.tv_cancel).setVisibility(View.GONE);
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container_main, new MyShoppingFragment()).commit();
                 break;
             case R.id.my_sales_btn:
                 home = false;
+                findViewById(R.id.tv_cancel).setVisibility(View.GONE);
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container_main, new MySalesFragment()).commit();
                 break;
             case R.id.alliances_btn:
                 home = false;
+                findViewById(R.id.tv_cancel).setVisibility(View.GONE);
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container_main, new AlliancesFragment()).commit();
                 break;
             case R.id.to_post_btn:
+                findViewById(R.id.tv_cancel).setVisibility(View.GONE);
                 startActivity(new Intent(MainActivity.this, AddProductActivity.class));
                 break;
             case R.id.billing_btn:
                 home = false;
                 toolbarText.setText(getString(R.string.billing));
                 secondaryIcon.setVisibility(View.VISIBLE);
+                findViewById(R.id.tv_cancel).setVisibility(View.GONE);
                 secondaryIcon.setImageResource(R.drawable.ic_sort);
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container_main, new BillingFragment()).commit();
                 break;
@@ -172,6 +188,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 home = false;
                 toolbarText.setText(getString(R.string.settings));
                 secondaryIcon.setVisibility(View.VISIBLE);
+                findViewById(R.id.tv_cancel).setVisibility(View.GONE);
                 secondaryIcon.setImageResource(R.drawable.ic_mdi_search);
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container_main, new SettingsFragment()).commit();
                 break;
@@ -179,6 +196,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 home = false;
                 toolbarText.setText(getString(R.string.my_account));
                 secondaryIcon.setVisibility(View.VISIBLE);
+                findViewById(R.id.tv_cancel).setVisibility(View.GONE);
                 secondaryIcon.setImageResource(R.drawable.ic_mdi_search);
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container_main, new MyAccountFragment()).commit();
                 break;
@@ -186,6 +204,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 home = false;
                 toolbarText.setText(getString(R.string.help));
                 secondaryIcon.setVisibility(View.VISIBLE);
+                findViewById(R.id.tv_cancel).setVisibility(View.GONE);
                 secondaryIcon.setImageResource(R.drawable.ic_mdi_search);
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container_main, new HelpFragment()).commit();
                 break;
@@ -193,20 +212,33 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 home = false;
                 toolbarText.setText(getString(R.string.promote));
                 secondaryIcon.setVisibility(View.VISIBLE);
+                findViewById(R.id.tv_cancel).setVisibility(View.GONE);
                 secondaryIcon.setImageResource(R.drawable.menu);
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container_main, new PromoteFragment()).commit();
                 break;
             case R.id.how_work_btn:
                 home = false;
+                findViewById(R.id.tv_cancel).setVisibility(View.GONE);
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container_main, new HomeFragment()).commit();
                 break;
             case R.id.about_btn:
                 home = false;
+                findViewById(R.id.tv_cancel).setVisibility(View.GONE);
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container_main, new HomeFragment()).commit();
                 break;
             case R.id.rate_btn:
                 home = false;
+                findViewById(R.id.tv_cancel).setVisibility(View.GONE);
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container_main, new HomeFragment()).commit();
+                break;
+
+            case R.id.main_continue_button:
+                home = false;
+                findViewById(R.id.tv_cancel).setVisibility(View.GONE);
+                if (getSupportFragmentManager().getFragments().get(getSupportFragmentManager().getFragments().size() - 1) instanceof RateOrderFragment) {
+                    getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container_main, new RateDeliveryBuyerFragment()).commit();
+                    hideFullScreenFragmentLayout();
+                }
                 break;
         }
         drawerLayout.closeDrawer(GravityCompat.START, true);
@@ -218,13 +250,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     @Override
     public void onBackPressed() {
+        findViewById(R.id.tv_cancel).setVisibility(View.GONE);
         if (drawerLayout.isDrawerOpen(GravityCompat.START)) {
             drawerLayout.closeDrawer(GravityCompat.START);
         } else if (filterRecyclerView.isOpened()) {
             filterRecyclerView.close();
         } else if (findViewById(R.id.search_text_card).getVisibility() == View.VISIBLE) {
             findViewById(R.id.search_text_card).setVisibility(View.GONE);
-        }else if(getSupportFragmentManager().getBackStackEntryCount() > 0){
+        } else if (getSupportFragmentManager().getBackStackEntryCount() > 0) {
             getSupportFragmentManager().popBackStack();
         } else if (home) {
             super.onBackPressed();
@@ -233,6 +266,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             bottomNavigationView.setSelectedItemId(R.id.bottom_nav_home);
             toolbarText.setText("INDIABANA");
             secondaryIcon.setVisibility(View.VISIBLE);
+            findViewById(R.id.tv_cancel).setVisibility(View.GONE);
             secondaryIcon.setImageResource(R.drawable.ic_mdi_search);
         }
     }
@@ -246,12 +280,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 bottomNavigationView.setSelectedItemId(R.id.bottom_nav_home);
                 toolbarText.setText("INDIABANA");
                 secondaryIcon.setVisibility(View.VISIBLE);
+                findViewById(R.id.tv_cancel).setVisibility(View.GONE);
                 secondaryIcon.setImageResource(R.drawable.ic_mdi_search);
             }
         }
     }
 
     public void showFullScreenFragmentLayout() {
+        findViewById(R.id.tv_cancel).setVisibility(View.GONE);
         findViewById(R.id.fragment_full_container_main).setVisibility(View.VISIBLE);
         findViewById(R.id.rl_bottom_button).setVisibility(View.VISIBLE);
 
@@ -262,6 +298,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
 
     public void hideFullScreenFragmentLayout() {
+        findViewById(R.id.tv_cancel).setVisibility(View.GONE);
         findViewById(R.id.fragment_full_container_main).setVisibility(View.GONE);
         findViewById(R.id.rl_bottom_button).setVisibility(View.GONE);
 
