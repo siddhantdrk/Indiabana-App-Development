@@ -1,25 +1,31 @@
 package com.indiabana.Fragments.Cart;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.content.res.ColorStateList;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
 
 import android.view.LayoutInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.PopupMenu;
 
 import com.google.android.material.card.MaterialCardView;
+import com.indiabana.Activities.MainActivity;
 import com.indiabana.R;
+
+import static android.app.Activity.RESULT_OK;
 
 /**
  * A simple {@link Fragment} subclass.
  * Use the {@link ShippingAddressFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class ShippingAddressFragment extends Fragment implements View.OnClickListener {
+public class ShippingAddressFragment extends Fragment implements View.OnClickListener, PopupMenu.OnMenuItemClickListener {
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -72,6 +78,14 @@ public class ShippingAddressFragment extends Fragment implements View.OnClickLis
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_shipping_address, container, false);
 
+        view.findViewById(R.id.to_post_activity_back_arrow).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                getActivity().onBackPressed();
+                ((MainActivity) getActivity()).showFullScreenFragmentLayout();
+            }
+        });
+
         addressOne = view.findViewById(R.id.shipping_address_material_card_address_one);
         iconOne = view.findViewById(R.id.shipping_address_iv_location_one);
         addressTwo = view.findViewById(R.id.shipping_address_material_card_address_two);
@@ -103,6 +117,17 @@ public class ShippingAddressFragment extends Fragment implements View.OnClickLis
                 iconOne.setBackgroundTintList(ColorStateList.valueOf(getResources().getColor(R.color.black)));
                 iconTwo.setBackgroundTintList(ColorStateList.valueOf(getResources().getColor(R.color.indiabana_orange)));
                 break;
+            case R.id.icon:
+                PopupMenu popupMenu = new PopupMenu(getActivity(), view);
+                popupMenu.setOnMenuItemClickListener(this);
+                popupMenu.inflate(R.menu.toolbar_menu);
+                popupMenu.show();
+                break;
         }
+    }
+
+    @Override
+    public boolean onMenuItemClick(MenuItem menuItem) {
+        return false;
     }
 }

@@ -199,6 +199,10 @@
     <string name="commodity_cart">Mercancía:</string>
     <string name="discount">Descuento:</string>
     <string name="partner_program">Programa de aliados:</string>
+
+    <!--cart order scuccess-->
+    <string name="successful_purchase">Compra exitosa </string>
+    <string name="see_purchase_details">Ver Detalles de la compra</string>
     <!--    Cart Fragment-->
 
     <!--    Shopping Address Fragment-->

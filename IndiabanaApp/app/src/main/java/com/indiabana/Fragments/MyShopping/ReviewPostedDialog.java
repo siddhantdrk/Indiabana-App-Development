@@ -60,9 +60,6 @@ public class ReviewPostedDialog extends DialogFragment {
 
         viewRoot.findViewById(R.id.no_thanks).setOnClickListener(view -> {
             mDialog.hide();
-            getActivity().onBackPressed();
-            getActivity().onBackPressed();
-            getActivity().onBackPressed();
         });
 
         viewRoot.findViewById(R.id.yes_tip).setOnClickListener(view -> {

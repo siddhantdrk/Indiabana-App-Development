@@ -300,6 +300,10 @@
     <string name="my_addresses">My addresses</string>
     <string name="select_the_address_you_want_or_add_a_new_one_keep_in_mind_this_can_modify_the_price_and_delivery_time">Select the address you want or add a new one. Keep in mind this can modify the price and delivery time.</string>
     <string name="add_new_address">Add new address</string>
+
+    <!--cart order scuccess-->
+    <string name="successful_purchase">Successful purchase</string>
+    <string name="see_purchase_details">See purchase details</string>
     <!--    Cart Fragment-->
 
     <!--    Shopping Address Fragment-->

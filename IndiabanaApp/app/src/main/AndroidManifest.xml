@@ -12,7 +12,7 @@
         <activity android:name=".Activities.PotentialAlliancesItemActivity" />
         <activity android:name=".Activities.AllianceRequestActivityTemp" />
         <activity android:name=".Activities.AllianceRequestActivity" />
-        <activity android:name=".Activities.CartActivity" />
+        <activity android:name=".Fragments.Cart.HomeCartFragment" />
         <activity android:name=".Activities.TestLayoutActivity" />
         <activity android:name=".Activities.PasswordRecoveryActivity" />
         <activity android:name=".Activities.RegisterActivity" />

@@ -87,6 +87,14 @@ public class RateOrderFragment extends Fragment implements PopupMenu.OnMenuItemC
             popupMenu.show();
         });
 
+        viewroot.findViewById(R.id.cart_continue_btn).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Util.replaceFragment(new RateDeliveryBuyerFragment(),((MainActivity) getActivity()), R.id.fragment_container_main);
+                ((MainActivity) getActivity()).hideFullScreenFragmentLayout();
+            }
+        });
+
         ((RadioButton) viewroot.findViewById(R.id.rb_problem_with_package)).setOnCheckedChangeListener((compoundButton, b) -> {
             /*if (b) {
                 ((RadioButton) viewroot.findViewById(R.id.rb_problem_with_package)).setChecked(false);

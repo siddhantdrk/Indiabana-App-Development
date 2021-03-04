@@ -19,16 +19,15 @@ import com.google.android.material.navigation.NavigationView;
 import com.indiabana.Activities.AddProduct.AddProductActivity;
 import com.indiabana.Fragments.Alliances.AlliancesFragment;
 import com.indiabana.Fragments.BillingFragment;
+import com.indiabana.Fragments.Cart.HomeCartFragment;
 import com.indiabana.Fragments.FavouritesFragment;
 import com.indiabana.Fragments.HelpFragment;
 import com.indiabana.Fragments.HomeFragment;
 import com.indiabana.Fragments.MyAccountFragment;
 import com.indiabana.Fragments.MySales.MySalesFragment;
-import com.indiabana.Fragments.MyShopping.BuyerOrderProblemFragment;
 import com.indiabana.Fragments.MyShopping.MyShoppingFragment;
 import com.indiabana.Fragments.MyShopping.RateDeliveryBuyerFragment;
 import com.indiabana.Fragments.MyShopping.RateOrderFragment;
-import com.indiabana.Fragments.MyShopping.RatePurchaseFragment;
 import com.indiabana.Fragments.NotificationFragment;
 import com.indiabana.Fragments.PromoteFragment;
 import com.indiabana.Fragments.Question.QuestionFragment;
@@ -83,8 +82,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 case R.id.bottom_nav_cart:
                     home = false;
                     findViewById(R.id.tv_cancel).setVisibility(View.GONE);
-                    Intent intent = new Intent(MainActivity.this, CartActivity.class);
-                    startActivityForResult(intent, RESULT_CODE);
+                    Util.replaceFragment(new HomeCartFragment(), MainActivity.this, R.id.fragment_full_container_main);
+                    showFullScreenFragmentLayout();
+ /*Intent intent = new Intent(MainActivity.this, HomeCartFragment.class);
+                    startActivityForResult(intent, RESULT_CODE);*/
                     break;
             }
             return true;
@@ -137,7 +138,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         bottomNavigationView = findViewById(R.id.bottom_nav_main);
         toolbar = findViewById(R.id.toolbar);
 
-        findViewById(R.id.main_continue_button).setOnClickListener(this);
     }
 
 
@@ -234,16 +234,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 findViewById(R.id.tv_cancel).setVisibility(View.GONE);
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container_main, new HomeFragment()).commit();
                 break;
-
-            case R.id.main_continue_button:
-                home = false;
-                findViewById(R.id.tv_cancel).setVisibility(View.GONE);
-                if (getSupportFragmentManager().getFragments().get(getSupportFragmentManager().getFragments().size() - 1) instanceof RateOrderFragment) {
-                    Util.replaceFragment(new RateDeliveryBuyerFragment(), (MainActivity.this), R.id.fragment_container_main);
-                    //getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container_main, new RateDeliveryBuyerFragment()).addToBackStack(RateDeliveryBuyerFragment.class.getSimpleName()).commit();
-                    hideFullScreenFragmentLayout();
-                }
-                break;
         }
         drawerLayout.closeDrawer(GravityCompat.START, true);
     }
@@ -267,6 +257,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         } else if (home) {
             super.onBackPressed();
         } else {
+            hideFullScreenFragmentLayout();
             transaction(new HomeFragment());
             bottomNavigationView.setSelectedItemId(R.id.bottom_nav_home);
             toolbarText.setText("INDIABANA");
@@ -294,7 +285,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public void showFullScreenFragmentLayout() {
         findViewById(R.id.tv_cancel).setVisibility(View.GONE);
         findViewById(R.id.fragment_full_container_main).setVisibility(View.VISIBLE);
-        findViewById(R.id.rl_bottom_button).setVisibility(View.VISIBLE);
 
         findViewById(R.id.fragment_container_main).setVisibility(View.GONE);
         findViewById(R.id.bottom_nav_main).setVisibility(View.GONE);
@@ -305,7 +295,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public void hideFullScreenFragmentLayout() {
         findViewById(R.id.tv_cancel).setVisibility(View.GONE);
         findViewById(R.id.fragment_full_container_main).setVisibility(View.GONE);
-        findViewById(R.id.rl_bottom_button).setVisibility(View.GONE);
 
         findViewById(R.id.fragment_container_main).setVisibility(View.VISIBLE);
         findViewById(R.id.bottom_nav_main).setVisibility(View.VISIBLE);
