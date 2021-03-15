@@ -59,11 +59,11 @@ public class ReviewPostedDialog extends DialogFragment {
         mDialog.getWindow().setLayout(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
 
         viewRoot.findViewById(R.id.no_thanks).setOnClickListener(view -> {
-            mDialog.hide();
+            mDialog.dismiss();
         });
 
         viewRoot.findViewById(R.id.yes_tip).setOnClickListener(view -> {
-            mDialog.hide();
+            mDialog.dismiss();
             Util.replaceFragment(new AddTipFragment(), (MainActivity) getActivity(), R.id.fragment_container_main);
 
         });

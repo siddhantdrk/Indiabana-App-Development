@@ -60,14 +60,14 @@ public class ModalSecurityCodeDialog extends DialogFragment {
 
         mDialog.getWindow().setLayout(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
 
-        viewRoot.findViewById(R.id.iv_close).setOnClickListener(view -> mDialog.hide());
+        viewRoot.findViewById(R.id.iv_close).setOnClickListener(view -> mDialog.dismiss());
 
         viewRoot.findViewById(R.id.mb_cancel).setOnClickListener(view -> {
-            mDialog.hide();
+            mDialog.dismiss();
         });
 
         viewRoot.findViewById(R.id.mb_continue).setOnClickListener(view -> {
-            mDialog.hide();
+            mDialog.dismiss();
             Util.replaceFragment(new NewPaymentBankOrBankAccountFragment(), (MainActivity) getActivity(), R.id.fragment_container_main);
         });
 

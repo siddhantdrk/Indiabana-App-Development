@@ -57,14 +57,14 @@ public class ModalBankSecurityDialog extends DialogFragment {
 
         mDialog.getWindow().setLayout(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
 
-        viewRoot.findViewById(R.id.iv_close).setOnClickListener(view -> mDialog.hide());
+        viewRoot.findViewById(R.id.iv_close).setOnClickListener(view -> mDialog.dismiss());
 
         viewRoot.findViewById(R.id.mb_return).setOnClickListener(view -> {
-            mDialog.hide();
+            mDialog.dismiss();
         });
 
         viewRoot.findViewById(R.id.mb_continue).setOnClickListener(view -> {
-            mDialog.hide();
+            mDialog.dismiss();
             FragmentManager fm = getActivity().getSupportFragmentManager();
             ModalSecurityCodeDialog editNameDialogFragment = new ModalSecurityCodeDialog();
             editNameDialogFragment.show(fm, "ReviewPostedDialog");
