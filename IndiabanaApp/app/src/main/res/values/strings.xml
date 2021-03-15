@@ -118,6 +118,41 @@
     <string name="account_setting_buyer_seller_name">Names</string>
     <string name="account_setting_buyer_seller_Maria_Alegendra">Maria Alegendra</string>
     <string name="account_setting_buyer_seller_last_name">Last Names</string>
+    <string name="add_bank_account">Add bank account</string>
+    <string name="start_withdrawal">Start withdrawal</string>
+
+    <string name="add_new_payment_charge_method">Add new payment / charge method</string>
+    <string name="return_text">Return</string>
+    <string name="we_need_to_verify_your_identity_before_adding_a_new_withdrawal_method">We need to verify your identity before adding a new withdrawal method.</string>
+    <string name="enter_the_code_received_on_your_phone">Enter the code received on your phone.</string>
+    <string name="bank">Bank</string>
+    <string name="card">Card</string>
+
+    <string name="you_can_use_this_card_to_pay_for_your_purchases">You can use this card to pay for your purchases</string>
+    <string name="card_number">Card number</string>
+    <string name="cardholder">Cardholder</string>
+    <string name="write_the_name_of_the_cardholder">Write the name of the cardholder</string>
+    <string name="telephone">Telephone</string>
+    <string name="expiration">Expiration</string>
+    <string name="mm_aa">MM / AA</string>
+    <string name="cvv">CVV</string>
+    <string name="eg_233">Eg. 233</string>
+    <string name="primary_payment_method">Primary payment method</string>
+    <string name="billing_address">Billing Address</string>
+    <string name="select_or_add_the_billing_address">Select or add the billing address</string>
+    <string name="save">Save</string>
+
+    <string name="you_can_use_this_bank_to_withdraw_your_sales_earnings">You can use this bank to withdraw your sales earnings</string>
+    <string name="select_your_bank">Select your Bank</string>
+    <string name="account_number">Account number</string>
+    <string name="write_your_bank_account_number">Write your bank account number</string>
+    <string name="account_holder">Account holder</string>
+    <string name="enter_the_name_of_the_account_holder">Enter the name of the Account Holder</string>
+    <string name="cuil">CUIL</string>
+    <string name="write_the_cuil_associated_with_the_account">Write the CUIL associated with the account</string>
+    <string name="select_your_account_type">Select your account type</string>
+    <string name="account_type">Account type</string>
+    <string name="main_withdrawal_method">Main withdrawal method</string>
     <!--    BillingFragment-->
 
     <!--    SettingsFragment-->
@@ -151,6 +186,7 @@
     <string name="store_management">Store management</string>
     <string name="inventory">Inventory</string>
     <string name="manage_all_posts">Manage all posts</string>
+    <string name="add_new_address">Add new address</string>
     <!--    SettingsFragment-->
 
     <!--    MyAccountFragment-->
@@ -299,7 +335,6 @@
     <string name="partner_program">Partner program:</string>
     <string name="my_addresses">My addresses</string>
     <string name="select_the_address_you_want_or_add_a_new_one_keep_in_mind_this_can_modify_the_price_and_delivery_time">Select the address you want or add a new one. Keep in mind this can modify the price and delivery time.</string>
-    <string name="add_new_address">Add new address</string>
 
     <!--cart order scuccess-->
     <string name="successful_purchase">Successful purchase</string>

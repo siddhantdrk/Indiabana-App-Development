@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/et_account_number"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txt_account_number"
+            android:fontFamily="@font/roboto"
+            android:hint="@string/write_your_bank_account_number" />
+
+        <EditText
+            android:id="@+id/et_account_holder_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txt_accoun_holder"
+            android:fontFamily="@font/roboto"
+            android:hint="@string/enter_the_name_of_the_account_holder" />
+
+        <EditText
+            android:id="@+id/et_write_cuil_associated_with_the_account"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txt_cuil"
+            android:fontFamily="@font/roboto"
+            android:hint="@string/write_the_cuil_associated_with_the_account" />
+
+        <ImageView
+            android:id="@+id/iv_btn_guardar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_select_your_account_type"
+            android:layout_marginTop="15dp"
+            android:src="@drawable/ic_btn_guardar" />
+
+        <TextView
+            android:id="@+id/txt_account_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_select_your_bank"
+            android:layout_marginTop="15dp"
+            android:fontFamily="@font/roboto"
+            android:text="@string/account_number"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/txt_you_can_use_bank_to_withdraw"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/roboto"
+            android:text="@string/you_can_use_this_bank_to_withdraw_your_sales_earnings"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/txt_accoun_holder"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/et_account_number"
+            android:layout_marginTop="15dp"
+            android:fontFamily="@font/roboto"
+            android:text="@string/account_holder"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/txt_use_card_to_pay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txt_you_can_use_bank_to_withdraw"
+            android:layout_marginTop="15dp"
+            android:fontFamily="@font/roboto"
+            android:text="@string/bank"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/txt_cuil"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/et_account_holder_name"
+            android:layout_marginTop="15dp"
+            android:fontFamily="@font/roboto"
+            android:text="@string/cuil"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/tv_select_your_bank"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txt_use_card_to_pay"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/black_round_corner_bg"
+            android:drawableEnd="@drawable/ic_spinner_drop_downsvg"
+            android:fontFamily="@font/roboto"
+            android:paddingLeft="15dp"
+            android:paddingTop="10dp"
+            android:paddingRight="15dp"
+            android:paddingBottom="10dp"
+            android:text="@string/select_your_bank"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/txt_account_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/et_write_cuil_associated_with_the_account"
+            android:layout_marginTop="15dp"
+            android:fontFamily="@font/roboto"
+            android:text="@string/account_type"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/tv_select_your_account_type"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txt_account_type"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/black_round_corner_bg"
+            android:drawableEnd="@drawable/ic_spinner_drop_downsvg"
+            android:fontFamily="@font/roboto"
+            android:paddingLeft="15dp"
+            android:paddingTop="10dp"
+            android:paddingRight="15dp"
+            android:paddingBottom="10dp"
+            android:text="@string/select_your_account_type"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/tv_main_withdrawl_methode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_select_your_account_type"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="15dp"
+            android:layout_toEndOf="@+id/iv_btn_guardar"
+            android:fontFamily="@font/roboto"
+            android:text="@string/main_withdrawal_method"
+            android:textColor="@color/black" />
+
+        <com.google.android.material.button.MaterialButton
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_main_withdrawl_methode"
+            android:text="@string/cancel"
+            app:backgroundTint="@color/bill_rv_item_status_red"/>
+
+
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@+id/tv_main_withdrawl_methode"
+            android:text="@string/save"
+            app:backgroundTint="@color/indiabana_orange"/>
+
+    </RelativeLayout>
+</ScrollView>

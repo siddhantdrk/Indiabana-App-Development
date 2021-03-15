@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/desc_background"
+    android:padding="10dp">
+
+    <ImageView
+        android:id="@+id/iv_close"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:src="@drawable/ic_close" />
+
+    <ImageView
+        android:id="@+id/iv_finger_print"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/iv_close"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/ic_fingerprint_scan" />
+
+    <TextView
+        android:id="@+id/text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/iv_finger_print"
+        android:layout_marginTop="22dp"
+        android:fontFamily="@font/roboto"
+        android:gravity="center"
+        android:paddingHorizontal="10dp"
+        android:text="@string/we_need_to_verify_your_identity_before_adding_a_new_withdrawal_method"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        android:textStyle="normal" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/mb_return"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/text"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="22dp"
+        android:backgroundTint="@color/azul_oscuro"
+        android:text="@string/return_text" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/mb_continue"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/text"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="22dp"
+        android:layout_marginEnd="10dp"
+        android:backgroundTint="@color/indiabana_orange"
+        android:text="@string/continue_post" />
+
+</RelativeLayout>

@@ -1,4 +1,4 @@
-package com.indiabana.Fragments;
+package com.indiabana.Fragments.Billing;
 
 import android.os.Bundle;
 import android.util.Log;
@@ -10,15 +10,17 @@ import android.widget.ImageView;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.indiabana.Activities.MainActivity;
 import com.indiabana.Adapters.BillsFragmentRvAdapter;
 import com.indiabana.Data.BillsRvItem;
 import com.indiabana.Data.OpenNextFragmentFromAdapter;
 import com.indiabana.Fragments.MySales.SaleDetailsFragment;
 import com.indiabana.R;
+import com.indiabana.Utility.Util;
 
 import java.util.ArrayList;
 
-public class BillingFragment extends Fragment implements View.OnClickListener , OpenNextFragmentFromAdapter {
+public class BillingFragment extends Fragment implements View.OnClickListener, OpenNextFragmentFromAdapter {
     private View rootView;
     private RecyclerView billsRv;
     boolean status = true;
@@ -40,6 +42,7 @@ public class BillingFragment extends Fragment implements View.OnClickListener , 
         iconView = getActivity().findViewById(R.id.icon);
         iconView.setOnClickListener(this);
 
+        rootView.findViewById(R.id.withdraw_btn).setOnClickListener(this);
         return rootView;
     }
 
@@ -70,6 +73,9 @@ public class BillingFragment extends Fragment implements View.OnClickListener , 
                     getActivity().findViewById(R.id.horizontalScrollView).setVisibility(View.GONE);
                     status = true;
                 }
+                break;
+            case R.id.withdraw_btn:
+                Util.replaceFragment(new WithdrawOperationSellerFragment(), (MainActivity) getActivity(), R.id.fragment_container_main);
                 break;
         }
     }

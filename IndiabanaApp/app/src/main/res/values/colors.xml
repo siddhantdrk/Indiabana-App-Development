@@ -39,5 +39,7 @@
     <color name="gold_badge">#FFE07D</color>
     <color name="azul_oscuro">#13162D</color>
     <color name="stroke">#E0E0E0</color>
+    
+    <color name="gray_6">#F2F2F2</color>
     <!--AddProductPriceActivityRvAdapter-->
 </resources>
