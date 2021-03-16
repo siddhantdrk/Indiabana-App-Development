@@ -59,6 +59,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             switch (item.getItemId()) {
                 case R.id.bottom_nav_home:
                     home = true;
+                    toolbarText.setText("INDIABANA");
                     findViewById(R.id.tv_cancel).setVisibility(View.GONE);
                     fragment = new HomeFragment();
                     getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container_main, fragment).commit();
@@ -73,6 +74,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     break;
                 case R.id.bottom_nav_like:
                     home = false;
+                    toolbarText.setText("INDIABANA");
                     fragment = new FavouritesFragment();
                     findViewById(R.id.tv_cancel).setVisibility(View.GONE);
                     getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container_main, fragment).commit();
