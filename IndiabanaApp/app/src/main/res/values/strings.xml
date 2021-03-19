@@ -502,4 +502,12 @@
     <string name="tipping">Dar propina</string>
     <string name="cancel">Cancel</string>
 
+    <!--
+    Help content fragemnt
+    -->
+    <string name="this_information_could_help_you">This information could help you</string>
+    <string name="did_this_information_help_you">Did this information help you?</string>
+    <!--
+Help content fragemnt
+-->
 </resources>

@@ -21,6 +21,7 @@ import com.indiabana.Fragments.Alliances.AlliancesFragment;
 import com.indiabana.Fragments.Billing.BillingFragment;
 import com.indiabana.Fragments.Cart.HomeCartFragment;
 import com.indiabana.Fragments.FavouritesFragment;
+import com.indiabana.Fragments.HelpCenterContentFragment;
 import com.indiabana.Fragments.HelpFragment;
 import com.indiabana.Fragments.HomeFragment;
 import com.indiabana.Fragments.MyAccountFragment;
@@ -222,7 +223,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.how_work_btn:
                 home = false;
                 findViewById(R.id.tv_cancel).setVisibility(View.GONE);
-                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container_main, new HomeFragment()).commit();
+                Util.replaceFragment(new HelpCenterContentFragment(), MainActivity.this, R.id.fragment_container_main);
+               hideToolbar();
                 break;
             case R.id.about_btn:
                 home = false;
@@ -236,6 +238,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
         }
         drawerLayout.closeDrawer(GravityCompat.START, true);
+    }
+
+    public void hideToolbar() {
+        findViewById(R.id.toolbar).setVisibility(View.GONE);
+    }
+
+    public void showToolbar() {
+        findViewById(R.id.toolbar).setVisibility(View.VISIBLE);
     }
 
     public void transaction(Fragment fragment) {

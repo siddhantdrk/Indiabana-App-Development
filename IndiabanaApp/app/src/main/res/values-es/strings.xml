@@ -536,4 +536,13 @@ que pueda ser identificada</string>
         <item>Dias</item>
     </string-array>
 
+    <!--
+   Help content fragemnt
+   -->
+    <string name="this_information_could_help_you">Esta información podría ayudarte</string>
+    <string name="did_this_information_help_you">¿Te ayudó esta información?</string>
+    <!--
+Help content fragemnt
+-->
+
 </resources>
